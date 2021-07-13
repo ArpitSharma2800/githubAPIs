@@ -3,7 +3,7 @@ info:
   version: '1.0'
   title: githubV2
   contact: {}
-host: localhost:5000
+host: 18.116.114.63:5000
 basePath: /api
 schemes:
 - http
