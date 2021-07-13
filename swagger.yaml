@@ -1,0 +1,78 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: githubV2
+  contact: {}
+host: localhost:5000
+basePath: /api
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /check:
+    get:
+      summary: server check
+      tags:
+      - Misc
+      operationId: servercheck
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /repo:
+    get:
+      summary: get repo with filters
+      tags:
+      - Misc
+      operationId: getrepowithfilters
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: keyword
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: created
+        in: query
+        required: false
+        type: string
+        description: ''
+      - name: stars
+        in: query
+        required: false
+        type: string
+        description: ''
+      - name: forks
+        in: query
+        required: false
+        type: string
+        description: ''
+      - name: language
+        in: query
+        required: false
+        type: string
+        description: ''
+      - name: license
+        in: query
+        required: false
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+        '404':
+          description: ''
+          headers: {}
+tags:
+- name: Misc
+  description: ''
