@@ -6,7 +6,7 @@ module.exports = {
         urlString = data.urlString;
         var config = {
             method: 'get',
-            url: `https://api.github.com/search/repositories${urlString}`,
+            url: `https://api.github.com/search/repositories${urlString}&type=Repositories&ref=advsearch&l=`,
         };
         axios(config)
             .then(function (response) {
