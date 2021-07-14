@@ -3,10 +3,11 @@ info:
   version: '1.0'
   title: githubV2
   contact: {}
-host: 18.116.114.63:5000
+host: https://api.github.com
 basePath: /api
 schemes:
 - http
+- https
 consumes:
 - application/json
 produces:
@@ -43,34 +44,40 @@ paths:
         description: ''
       - name: created
         in: query
-        required: false
+        required: true
         type: string
         description: ''
       - name: stars
         in: query
-        required: false
+        required: true
         type: string
         description: ''
       - name: forks
         in: query
-        required: false
+        required: true
         type: string
         description: ''
       - name: language
         in: query
-        required: false
-        type: string
-        description: ''
-      - name: license
-        in: query
-        required: false
+        required: true
         type: string
         description: ''
       responses:
         '200':
           description: ''
           headers: {}
-        '404':
+  /graphql:
+    post:
+      summary: graphql search
+      tags:
+      - Misc
+      operationId: graphqlsearch
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
           description: ''
           headers: {}
 tags:
