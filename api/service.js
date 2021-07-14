@@ -24,12 +24,11 @@ module.exports = {
             query: query(queryGit),
             variables: {}
         });
-
         var config = {
             method: 'post',
             url: 'https://api.github.com/graphql',
             headers: {
-                'Authorization': 'Bearer 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',
+                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
                 'Content-Type': 'application/json',
                 'Cookie': '_octo=GH1.1.1436014495.1626119614; logged_in=no'
             },
@@ -43,8 +42,6 @@ module.exports = {
             .catch(function (error) {
                 return callback(error);
             });
-
-
     }
 }
 
