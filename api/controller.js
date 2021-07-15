@@ -60,7 +60,8 @@ module.exports = {
             query
         } = req.params;
         const data = {
-            query
+            query,
+            filename: "query1"
         }
         graphQl(data, (err, results) => {
             if (err) {

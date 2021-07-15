@@ -1,5 +1,4 @@
 var axios = require('axios');
-
 module.exports = {
     repoSearch: (data, callback) => {
         // urlString = `?q=${data.keyword}&type=Repositories&ref=advsearch&l=`;
@@ -19,6 +18,7 @@ module.exports = {
 
     graphQl: (data, callback) => {
         queryGit = data.query;
+        var filename = data.filename
         var axios = require('axios');
         var data = JSON.stringify({
             query: query(queryGit),
@@ -37,6 +37,10 @@ module.exports = {
 
         axios(config)
             .then(function (response) {
+                const FileSystem = require("fs");
+                FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+                    return callback(error);
+                });
                 return callback(null, response.data);
             })
             .catch(function (error) {
