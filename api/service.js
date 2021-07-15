@@ -16,10 +16,9 @@ module.exports = {
             });
     },
 
-    graphQl: (data, callback) => {
+    graphQl: async (data, callback) => {
         queryGit = data.query;
         var filename = data.filename
-        var axios = require('axios');
         var data = JSON.stringify({
             query: query(queryGit),
             variables: {}
@@ -34,13 +33,9 @@ module.exports = {
             },
             data: data
         };
-
         axios(config)
             .then(function (response) {
-                const FileSystem = require("fs");
-                FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
-                    return callback(error);
-                });
+                // append(JSON.stringify(response.data.data.search.edges));
                 return callback(null, response.data);
             })
             .catch(function (error) {
@@ -48,6 +43,8 @@ module.exports = {
             });
     }
 }
+
+
 
 function query(queryGit) {
     return `{
