@@ -1,0 +1,11 @@
+
+
+const queries = [1, 4, 9, 16];
+queries.map(x=>{
+  let n = true;
+	while (n == true) {
+      console.log(x, "API CALL TO SERVER");
+      n = false;
+    }
+  console.log(x,"API HIT OF SUCCESS")
+});
