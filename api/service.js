@@ -41,12 +41,66 @@ module.exports = {
             .catch(function (error) {
                 return callback(error);
             });
+    },
+
+    graphQlMulti: async (data, callback) => {
+        queryGit = data.query;
+        var cursor = null;
+        var hasNextpage = true;
+        let responses = [];
+        let promises = [];
+        var n = 0;
+        while (promises.length < 2) {
+            console.log(cursor);
+            var data = JSON.stringify({
+                query: querys(queryGit),
+                variables: {}
+            });
+            var config = {
+                method: 'post',
+                url: 'https://api.github.com/graphql',
+                headers: {
+                    'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                    'Content-Type': 'application/json',
+                },
+                data: data
+            };
+            promises.push(
+                await axios(config)
+                .then(function (response) {
+                    // console.log(response.data);
+                    cursor = response.data.data.search.pageInfo.endCursor
+                    responses.push(JSON.stringify(response.data.data.search.edges))
+                })
+                .catch(function (err) {
+                    console.log(err);
+                    return callback(err);
+                }))
+            hasNextpage = false;
+            n = n + 1;
+        }
+
+        await Promise.all(promises).then((values) => append(responses, n));
+        console.log('Done!');
+        return callback(null, {
+            cursor,
+            hasNextpage
+        });
     }
 }
 
+function append(response, cursor) {
+    const fs = require("fs");
+    // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+    //     return callback(error);
+    // });
+    fs.appendFile(`./storedFile/${cursor}.json`, response, function (err) {
+        if (err) throw err;
+        console.log("save")
+    });
+}
 
-
-function query(queryGit) {
+function querys(queryGit) {
     return `{
     rateLimit {
         limit

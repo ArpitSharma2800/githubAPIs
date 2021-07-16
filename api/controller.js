@@ -1,6 +1,7 @@
 const {
     repoSearch,
-    graphQl
+    graphQl,
+    graphQlMulti
 } = require("./service");
 var axios = require('axios');
 module.exports = {
@@ -59,73 +60,26 @@ module.exports = {
         const {
             query
         } = req.params;
-        // const data = {
-        //     query
-        // }
-        var cursor = null;
-        var hasNextpage = true;
-        let responses = [];
-        let promises = [];
-        var n = 0;
-        while (n < 3) {
-            console.log(cursor);
-            var data = JSON.stringify({
-                query: querys(query),
-                variables: {}
-            });
-            var config = {
-                method: 'post',
-                url: 'https://api.github.com/graphql',
-                headers: {
-                    'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
-                    'Content-Type': 'application/json',
-                    'Cookie': '_octo=GH1.1.1436014495.1626119614; logged_in=no'
-                },
-                data: data
-            };
-            promises.push(
-                await axios(config)
-                .then(function (response) {
-                    // append(JSON.stringify(response.data.data.search.edges));
-                    cursor = response.data.data.search.pageInfo.endCursor
-                    responses.push(JSON.stringify(response.data.data.search.edges))
-                    // return callback(null, response.data);
-                })
-                .catch(function (err) {
-                    console.log(err);
-                    //             return res.status(500).json({
-                    //                 success: 0,
-                    //                 err,
-                    //             });
-                    // return callback(error);
-                }))
-            // console.log(n);
-            // promises.push(
-            //     graphQl(data, (err, results) => {
-            //         if (err) {
-            //             console.log(err);
-            //             return res.status(500).json({
-            //                 success: 0,
-            //                 err,
-            //             });
-            //         }
-            //         cursor = results.data.search.pageInfo.endCursor
-            //         // console.log(JSON.stringify(results.data.search.edges));
-            //         response.push(JSON.stringify(results.data.search.edges))
-            //         // promises2.push(append(JSON.stringify(results.data.search.edges), n))
-            //         // append(JSON.stringify(results.data.search.edges), results.data.search.pageInfo.endCursor);
-            //     })
-            // )
-            // hasNextpage = false;
-            n = n + 1;
+        const data = {
+            query
         }
-        await Promise.all(promises).then(() => append(responses, n));
-        console.log('Done!');
-        return res.status(200).json({
-            success: true,
-            message: "all queries completed"
-        });
+        graphQlMulti(data, (err, results) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).json({
+                    success: 0,
+                    err,
+                });
+            }
+            console.log(results);
+            return res.status(200).json({
+                success: true,
+                cursor: results.cursor,
+                hasNext: results.hasNextpage
+            });
+        })
     },
+    //repo graphql single
     repoGraphQLSingle: async (req, res) => {
         const {
             query
