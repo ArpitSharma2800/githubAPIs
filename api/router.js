@@ -9,7 +9,7 @@ const router = require("express").Router();
 
 router.get("/check", serverCheck);
 router.get("/repo", repository);
-router.get("/repoGraph/:query", repoGraphQL);
+router.post("/repoGraph", repoGraphQL);
 router.get("/repoGraphSingle/:query", repoGraphQLSingle);
 
 

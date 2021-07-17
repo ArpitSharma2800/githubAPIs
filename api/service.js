@@ -1,4 +1,8 @@
 var axios = require('axios');
+const {
+    querycursor,
+    querys
+} = require('../graphQL/queryies');
 module.exports = {
     repoSearch: (data, callback) => {
         // urlString = `?q=${data.keyword}&type=Repositories&ref=advsearch&l=`;
@@ -45,15 +49,17 @@ module.exports = {
 
     graphQlMulti: async (data, callback) => {
         queryGit = data.query;
-        var cursor = null;
+        var cursor = data.cursor;
         var hasNextpage = true;
         let responses = [];
+        // let languages = [];
+        // let topics = [];
         let promises = [];
         var n = 0;
-        while (promises.length < 2) {
+        while (promises.length < 10) {
             console.log(cursor);
             var data = JSON.stringify({
-                query: querys(queryGit),
+                query: cursor == null ? querys(queryGit) : querycursor(queryGit, cursor),
                 variables: {}
             });
             var config = {
@@ -71,6 +77,8 @@ module.exports = {
                     // console.log(response.data);
                     cursor = response.data.data.search.pageInfo.endCursor
                     responses.push(JSON.stringify(response.data.data.search.edges))
+                    // languages.push(JSON.stringify(response.data.data.search.edges))
+                    // topics.push(JSON.stringify(response.data.data.search.edges))
                 })
                 .catch(function (err) {
                     console.log(err);
@@ -81,7 +89,7 @@ module.exports = {
         }
 
         await Promise.all(promises).then((values) => append(responses, n));
-        console.log('Done!');
+        console.log('Done!', cursor);
         return callback(null, {
             cursor,
             hasNextpage
@@ -94,135 +102,30 @@ function append(response, cursor) {
     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
     //     return callback(error);
     // });
-    fs.appendFile(`./storedFile/${cursor}.json`, response, function (err) {
+    fs.appendFile(`./storedFile/main.json`, response, function (err) {
         if (err) throw err;
         console.log("save")
     });
 }
 
-function querys(queryGit) {
-    return `{
-    rateLimit {
-        limit
-        cost
-        remaining
-        used
-        resetAt
-        nodeCount
-    }
-    search(first: 10, query:"${queryGit}", type: REPOSITORY) {
-        pageInfo {
-        endCursor
-        hasNextPage
-        }
-        repositoryCount
-        userCount
-        wikiCount
-        edges {
-        cursor
-        node {
-            ... on Repository {
-            name
-            nameWithOwner
-            id
-            createdAt
-            databaseId
-            description
-            diskUsage
-            environments(first: 5) {
-                edges {
-                node {
-                    name
-                }
-                }
-                totalCount
-            }
-            forkCount
-            hasIssuesEnabled
-            hasProjectsEnabled
-            hasWikiEnabled
-            isArchived
-            isBlankIssuesEnabled
-            isDisabled
-            isEmpty
-            isFork
-            isInOrganization
-            isLocked
-            isMirror
-            isPrivate
-            isSecurityPolicyEnabled
-            isTemplate
-            isUserConfigurationRepository
-            issues {
-                totalCount
-            }
-            labels {
-                totalCount
-            }
-            languages(first: 20) {
-                edges {
-                node {
-                    name
-                }
-                }
-                totalCount
-            }
-            lockReason
-            mergeCommitAllowed
-            mirrorUrl
-            primaryLanguage {
-                name
-            }
-            projects {
-                totalCount
-            }
-            rebaseMergeAllowed
-            repositoryTopics(first: 20) {
-                edges {
-                node {
-                    topic {
-                    name
-                    relatedTopics(first: 10) {
-                        name
-                    }
-                    stargazerCount
-                    }
-                }
-                }
-                totalCount
-            }
-            stargazerCount
-            submodules(first: 10) {
-                edges {
-                node {
-                    name
-                }
-                }
-                totalCount
-            }
-            tempCloneToken
-            url
-            usesCustomOpenGraphImage
-            viewerCanAdminister
-            viewerCanCreateProjects
-            viewerCanSubscribe
-            viewerCanUpdateTopics
-            viewerDefaultCommitEmail
-            viewerDefaultMergeMethod
-            viewerHasStarred
-            viewerPermission
-            viewerPossibleCommitEmails
-            viewerSubscription
-            watchers {
-                totalCount
-            }
-            }
-        }
-        textMatches {
-            fragment
-            property
-        }
-        }
-    }
-    }`
-}
+// function appendLang(response, cursor) {
+//     const fs = require("fs");
+//     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+//     //     return callback(error);
+//     // });
+//     fs.appendFile(`./storedFile/lang.json`, response, function (err) {
+//         if (err) throw err;
+//         console.log("save")
+//     });
+// }
+
+// function appendTopics(response, cursor) {
+//     const fs = require("fs");
+//     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+//     //     return callback(error);
+//     // });
+//     fs.appendFile(`./storedFile/topics.json`, response, function (err) {
+//         if (err) throw err;
+//         console.log("save")
+//     });
+// }

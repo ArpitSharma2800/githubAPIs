@@ -58,10 +58,12 @@ module.exports = {
     //repos graphql
     repoGraphQL: async (req, res) => {
         const {
-            query
-        } = req.params;
+            query,
+            cursor
+        } = req.body;
         const data = {
-            query
+            query,
+            cursor
         }
         graphQlMulti(data, (err, results) => {
             if (err) {
@@ -72,12 +74,13 @@ module.exports = {
                 });
             }
             console.log(results);
-            return res.status(200).json({
-                success: true,
-                cursor: results.cursor,
-                hasNext: results.hasNextpage
-            });
         })
+        return res.status(200).json({
+            success: true,
+            message: "extraction started, please follow DB for further info"
+            // cursor: results.cursor,
+            // hasNext: results.hasNextpage
+        });
     },
     //repo graphql single
     repoGraphQLSingle: async (req, res) => {
