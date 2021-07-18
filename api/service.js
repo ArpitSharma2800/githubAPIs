@@ -55,7 +55,8 @@ module.exports = {
     },
 
     graphQlMulti: async (data, callback) => {
-        queryGit = data.query;
+        let queryGit = data.query;
+        let first = data.first;
         var cursor = data.cursor;
         let limit = null;
         let nodeCount = null;
@@ -79,7 +80,7 @@ module.exports = {
                 }
                 console.log(cursor);
                 var data = JSON.stringify({
-                    query: cursor == null ? querys(queryGit) : querycursor(queryGit, cursor),
+                    query: cursor == null ? querys(queryGit, first) : querycursor(queryGit, first, cursor),
                     variables: {}
                 });
                 var config = {

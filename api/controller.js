@@ -59,11 +59,13 @@ module.exports = {
     repoGraphQL: async (req, res) => {
         const {
             query,
-            cursor
+            cursor,
+            first
         } = req.body;
         const data = {
             query,
-            cursor
+            cursor,
+            first
         }
         graphQlMulti(data, (err, results) => {
             if (err) {

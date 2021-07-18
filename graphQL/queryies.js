@@ -1,4 +1,4 @@
-function querys(queryGit) {
+function querys(queryGit, first) {
   return `{
         rateLimit {
           limit
@@ -8,7 +8,7 @@ function querys(queryGit) {
           resetAt
           nodeCount
         }
-        search(first: 20, query:"${queryGit}", type: REPOSITORY) {
+        search(first:${first}, query:"${queryGit}", type: REPOSITORY) {
           pageInfo {
             endCursor
             hasNextPage
@@ -127,7 +127,7 @@ function querys(queryGit) {
 }
 
 
-function querycursor(queryGit, cursor) {
+function querycursor(queryGit, first, cursor) {
   return `{
         rateLimit {
           limit
@@ -137,7 +137,7 @@ function querycursor(queryGit, cursor) {
           resetAt
           nodeCount
         }
-        search(first: 20, query:"${queryGit}", type: REPOSITORY,after: "${cursor}") {
+        search(first: ${first}, query:"${queryGit}", type: REPOSITORY,after: "${cursor}") {
           pageInfo {
             endCursor
             hasNextPage
