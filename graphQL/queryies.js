@@ -1,5 +1,5 @@
 function querys(queryGit) {
-    return `{
+  return `{
         rateLimit {
           limit
           cost
@@ -128,7 +128,7 @@ function querys(queryGit) {
 
 
 function querycursor(queryGit, cursor) {
-    return `{
+  return `{
         rateLimit {
           limit
           cost
@@ -256,6 +256,6 @@ function querycursor(queryGit, cursor) {
 }
 
 module.exports = {
-    querys,
-    querycursor
+  querys,
+  querycursor
 };

@@ -3,6 +3,9 @@ const {
     querycursor,
     querys
 } = require('../graphQL/queryies');
+const {
+    completedQuery
+} = require('./dbService/dbservice');
 module.exports = {
     repoSearch: (data, callback) => {
         // urlString = `?q=${data.keyword}&type=Repositories&ref=advsearch&l=`;
@@ -50,12 +53,13 @@ module.exports = {
     graphQlMulti: async (data, callback) => {
         queryGit = data.query;
         var cursor = data.cursor;
+        let limit = null;
+        let nodeCount = null;
         var hasNextpage = true;
         let responses = [];
         // let languages = [];
         // let topics = [];
         let promises = [];
-        var n = 0;
         while (promises.length < 10) {
             console.log(cursor);
             var data = JSON.stringify({
@@ -74,21 +78,35 @@ module.exports = {
             promises.push(
                 await axios(config)
                 .then(function (response) {
+
                     // console.log(response.data);
-                    cursor = response.data.data.search.pageInfo.endCursor
+                    const dbData = {
+                        query: queryGit,
+                        cursor: cursor || "first query",
+                        hasLastPage: hasNextpage,
+                        limitremaining: limit || -1,
+                        nodeCount: nodeCount || -1,
+                    }
+                    // console.log(dbData);
+                    completedQuery(dbData, (err, results) => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        console.log("push completed");
+                    })
+                    cursor = response.data.data.search.pageInfo.endCursor;
+                    hasNextpage = response.data.data.search.pageInfo.hasNextPage;
+                    limit = response.data.data.rateLimit.remaining;
+                    nodeCount = response.data.data.rateLimit.nodeCount;
                     responses.push(JSON.stringify(response.data.data.search.edges))
-                    // languages.push(JSON.stringify(response.data.data.search.edges))
-                    // topics.push(JSON.stringify(response.data.data.search.edges))
                 })
                 .catch(function (err) {
                     console.log(err);
                     return callback(err);
                 }))
-            hasNextpage = false;
-            n = n + 1;
         }
 
-        await Promise.all(promises).then((values) => append(responses, n));
+        await Promise.all(promises).then((values) => append(responses));
         console.log('Done!', cursor);
         return callback(null, {
             cursor,
@@ -97,7 +115,7 @@ module.exports = {
     }
 }
 
-function append(response, cursor) {
+function append(response) {
     const fs = require("fs");
     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
     //     return callback(error);

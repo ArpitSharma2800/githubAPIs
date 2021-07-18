@@ -73,7 +73,7 @@ module.exports = {
                     err,
                 });
             }
-            console.log(results);
+            console.log("results completed");
         })
         return res.status(200).json({
             success: true,

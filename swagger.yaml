@@ -1,85 +1,71 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
-  version: '1.0'
+  version: "1.0"
   title: githubV2
   contact: {}
 host: https://api.github.com
 basePath: /api
 schemes:
-- http
-- https
+  - http
+  - https
 consumes:
-- application/json
+  - application/json
 produces:
-- application/json
+  - application/json
 paths:
   /check:
     get:
       summary: server check
       tags:
-      - Misc
+        - Misc
       operationId: servercheck
       deprecated: false
       produces:
-      - application/json
+        - application/json
       parameters: []
       responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           headers: {}
   /repo:
     get:
       summary: get repo with filters
       tags:
-      - Misc
+        - Misc
       operationId: getrepowithfilters
       deprecated: false
       produces:
-      - application/json
+        - application/json
       parameters:
-      - name: keyword
-        in: query
-        required: true
-        type: string
-        description: ''
-      - name: created
-        in: query
-        required: true
-        type: string
-        description: ''
-      - name: stars
-        in: query
-        required: true
-        type: string
-        description: ''
-      - name: forks
-        in: query
-        required: true
-        type: string
-        description: ''
-      - name: language
-        in: query
-        required: true
-        type: string
-        description: ''
+        - name: keyword
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: created
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: stars
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: forks
+          in: query
+          required: true
+          type: string
+          description: ""
+        - name: language
+          in: query
+          required: true
+          type: string
+          description: ""
       responses:
-        '200':
-          description: ''
-          headers: {}
-  /graphql:
-    post:
-      summary: graphql search
-      tags:
-      - Misc
-      operationId: graphqlsearch
-      deprecated: false
-      produces:
-      - application/json
-      parameters: []
-      responses:
-        '200':
-          description: ''
+        "200":
+          description: ""
           headers: {}
 tags:
-- name: Misc
-  description: ''
+  - name: Misc
+    description: ""
