@@ -8,7 +8,7 @@ function querys(queryGit) {
           resetAt
           nodeCount
         }
-        search(first: 2, query:"${queryGit}", type: REPOSITORY) {
+        search(first: 20, query:"${queryGit}", type: REPOSITORY) {
           pageInfo {
             endCursor
             hasNextPage
@@ -137,7 +137,7 @@ function querycursor(queryGit, cursor) {
           resetAt
           nodeCount
         }
-        search(first: 2, query:"${queryGit}", type: REPOSITORY,after: "${cursor}") {
+        search(first: 20, query:"${queryGit}", type: REPOSITORY,after: "${cursor}") {
           pageInfo {
             endCursor
             hasNextPage

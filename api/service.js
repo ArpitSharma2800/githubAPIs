@@ -1,5 +1,9 @@
 var axios = require('axios');
 const {
+    response
+} = require('express');
+const fs = require("fs");
+const {
     querycursor,
     querys
 } = require('../graphQL/queryies');
@@ -57,93 +61,105 @@ module.exports = {
         let nodeCount = null;
         var hasNextpage = true;
         let responses = [];
-        // let languages = [];
-        // let topics = [];
         let promises = [];
-        while (promises.length < 10) {
-            console.log(cursor);
-            var data = JSON.stringify({
-                query: cursor == null ? querys(queryGit) : querycursor(queryGit, cursor),
-                variables: {}
-            });
-            var config = {
-                method: 'post',
-                url: 'https://api.github.com/graphql',
-                headers: {
-                    'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
-                    'Content-Type': 'application/json',
-                },
-                data: data
-            };
-            promises.push(
-                await axios(config)
-                .then(function (response) {
-
-                    // console.log(response.data);
-                    const dbData = {
-                        query: queryGit,
-                        cursor: cursor || "first query",
-                        hasLastPage: hasNextpage,
-                        limitremaining: limit || -1,
-                        nodeCount: nodeCount || -1,
+        let n = 0;
+        while (n < 5 && hasNextpage == true) {
+            try {
+                console.log(n);
+                if (n == 4) {
+                    console.log("running");
+                    try {
+                        append(responses)
+                        promises = [];
+                        responses = [];
+                        n = 0;
+                    } catch (error) {
+                        console.log(error);
                     }
-                    // console.log(dbData);
-                    completedQuery(dbData, (err, results) => {
-                        if (err) {
-                            console.log(err);
+                }
+                console.log(cursor);
+                var data = JSON.stringify({
+                    query: cursor == null ? querys(queryGit) : querycursor(queryGit, cursor),
+                    variables: {}
+                });
+                var config = {
+                    method: 'post',
+                    url: 'https://api.github.com/graphql',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                        'Content-Type': 'application/json',
+                    },
+                    data: data
+                };
+                // promises.push(
+                await axios(config)
+                    .then(function (response) {
+                        const dbData = {
+                            query: queryGit,
+                            cursor: cursor || "first query",
+                            hasLastPage: hasNextpage,
+                            limitremaining: limit || -1,
+                            nodeCount: nodeCount || -1,
                         }
-                        console.log("push completed");
+                        completedQuery(dbData, (err, results) => {
+                            if (err) {
+                                console.log(err);
+                            }
+                            console.log("db push completed");
+                        })
+                        cursor = response.data.data.search.pageInfo.endCursor;
+                        hasNextpage = response.data.data.search.pageInfo.hasNextPage;
+                        limit = response.data.data.rateLimit.remaining;
+                        nodeCount = response.data.data.rateLimit.nodeCount;
+                        responses.push(JSON.stringify(response.data.data.search.edges))
                     })
-                    cursor = response.data.data.search.pageInfo.endCursor;
-                    hasNextpage = response.data.data.search.pageInfo.hasNextPage;
-                    limit = response.data.data.rateLimit.remaining;
-                    nodeCount = response.data.data.rateLimit.nodeCount;
-                    responses.push(JSON.stringify(response.data.data.search.edges))
-                })
-                .catch(function (err) {
-                    console.log(err);
-                    return callback(err);
-                }))
+                    .catch(function (err) {
+                        console.log(err);
+                        return callback(err);
+                    })
+            } catch (error) {
+                console.log(error);
+            }
+            n = n + 1;
         }
-
-        await Promise.all(promises).then((values) => append(responses));
+        // await Promise.all(promises).then(async (values) => {
+        //     append(responses)
+        //     // console.log("donee");
+        // });
+        try {
+            const dbData = {
+                query: queryGit,
+                cursor: cursor || "first query",
+                hasLastPage: hasNextpage,
+                limitremaining: limit || -1,
+                nodeCount: nodeCount || -1,
+            }
+            completedQuery(dbData, (err, results) => {
+                if (err) {
+                    console.log(err);
+                }
+                console.log("db push completed");
+            })
+        } catch (error) {
+            console.log(error);
+        }
         console.log('Done!', cursor);
         return callback(null, {
             cursor,
-            hasNextpage
+            hasNextpage,
+            hasNextpage,
+            limit,
+            queryGit
         });
     }
 }
 
 function append(response) {
-    const fs = require("fs");
     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
     //     return callback(error);
     // });
-    fs.appendFile(`./storedFile/main.json`, response, function (err) {
+    fs.appendFile(`./storedFile/main2.json`, response, function (err) {
         if (err) throw err;
         console.log("save")
     });
 }
-
-// function appendLang(response, cursor) {
-//     const fs = require("fs");
-//     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
-//     //     return callback(error);
-//     // });
-//     fs.appendFile(`./storedFile/lang.json`, response, function (err) {
-//         if (err) throw err;
-//         console.log("save")
-//     });
-// }
-
-// function appendTopics(response, cursor) {
-//     const fs = require("fs");
-//     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
-//     //     return callback(error);
-//     // });
-//     fs.appendFile(`./storedFile/topics.json`, response, function (err) {
-//         if (err) throw err;
-//         console.log("save")
-//     });
-// }

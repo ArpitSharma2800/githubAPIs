@@ -21,6 +21,6 @@ module.exports = {
                 // console.log(data.cursor + "success");
                 // process.exit(1)
             }
-        )
+        );
     }
 }
