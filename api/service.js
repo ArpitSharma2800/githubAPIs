@@ -62,39 +62,14 @@ module.exports = {
         let nodeCount = null;
         var hasNextpage = true;
         let responses = [];
-        let promises = [];
+        // let promises = [];
         let n = 0;
-        while (n < 5 && hasNextpage == true) {
+        while (hasNextpage == true) {
             try {
                 console.log(n);
-                if (n == 4) {
+                if (responses.length == 10) {
                     console.log("running");
                     try {
-                        append(responses)
-                        promises = [];
-                        responses = [];
-                        n = 0;
-                    } catch (error) {
-                        console.log(error);
-                    }
-                }
-                console.log(cursor);
-                var data = JSON.stringify({
-                    query: cursor == null ? querys(queryGit, first) : querycursor(queryGit, first, cursor),
-                    variables: {}
-                });
-                var config = {
-                    method: 'post',
-                    url: 'https://api.github.com/graphql',
-                    headers: {
-                        'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
-                        'Content-Type': 'application/json',
-                    },
-                    data: data
-                };
-                // promises.push(
-                await axios(config)
-                    .then(function (response) {
                         const dbData = {
                             query: queryGit,
                             cursor: cursor || "first query",
@@ -108,16 +83,45 @@ module.exports = {
                             }
                             console.log("db push completed");
                         })
-                        cursor = response.data.data.search.pageInfo.endCursor;
-                        hasNextpage = response.data.data.search.pageInfo.hasNextPage;
-                        limit = response.data.data.rateLimit.remaining;
-                        nodeCount = response.data.data.rateLimit.nodeCount;
-                        responses.push(JSON.stringify(response.data.data.search.edges))
-                    })
-                    .catch(function (err) {
-                        console.log(err);
-                        return callback(err);
-                    })
+                        append(responses)
+                        promises = [];
+                        responses = [];
+                        n = 0;
+                        console.log("all cleared");
+                    } catch (error) {
+                        console.log(error);
+                    }
+                } else {
+                    // console.log("running search");
+                    console.log(cursor);
+                    var data = JSON.stringify({
+                        query: cursor == null ? querys(queryGit, first) : querycursor(queryGit, first, cursor),
+                        variables: {}
+                    });
+                    var config = {
+                        method: 'post',
+                        url: 'https://api.github.com/graphql',
+                        headers: {
+                            'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                            'Content-Type': 'application/json',
+                        },
+                        data: data
+                    };
+                    // promises.push(
+                    await axios(config)
+                        .then(function (response) {
+
+                            cursor = response.data.data.search.pageInfo.endCursor;
+                            hasNextpage = response.data.data.search.pageInfo.hasNextPage;
+                            limit = response.data.data.rateLimit.remaining;
+                            nodeCount = response.data.data.rateLimit.nodeCount;
+                            responses.push(JSON.stringify(response.data.data.search.edges))
+                        })
+                        .catch(function (err) {
+                            console.log(err);
+                            return callback(err);
+                        })
+                }
             } catch (error) {
                 console.log(error);
             }
@@ -139,11 +143,14 @@ module.exports = {
                 if (err) {
                     console.log(err);
                 }
-                console.log("db push completed");
+                console.log("db push completed final");
             })
         } catch (error) {
             console.log(error);
         }
+        await append(responses)
+        promises = [];
+        responses = [];
         console.log('Done!', cursor);
         return callback(null, {
             cursor,
@@ -159,7 +166,7 @@ function append(response) {
     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
     //     return callback(error);
     // });
-    fs.appendFile(`./storedFile/main2.json`, response, function (err) {
+    fs.appendFile(`./storedFile/1617.txt`, response, function (err) {
         if (err) throw err;
         console.log("save")
     });

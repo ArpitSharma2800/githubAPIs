@@ -60,7 +60,7 @@ function querys(queryGit, first) {
                 labels {
                   totalCount
                 }
-                languages(first: 20) {
+                languages(first: 10) {
                   edges {
                     node {
                       name
@@ -78,7 +78,7 @@ function querys(queryGit, first) {
                   totalCount
                 }
                 rebaseMergeAllowed
-                repositoryTopics(first: 20) {
+                repositoryTopics(first: 10) {
                   edges {
                     node {
                       topic {
@@ -189,7 +189,7 @@ function querycursor(queryGit, first, cursor) {
                 labels {
                   totalCount
                 }
-                languages(first: 20) {
+                languages(first: 10) {
                   edges {
                     node {
                       name
@@ -207,7 +207,7 @@ function querycursor(queryGit, first, cursor) {
                   totalCount
                 }
                 rebaseMergeAllowed
-                repositoryTopics(first: 20) {
+                repositoryTopics(first: 10) {
                   edges {
                     node {
                       topic {

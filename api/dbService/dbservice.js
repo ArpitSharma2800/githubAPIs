@@ -14,10 +14,10 @@ module.exports = {
             (error, results, fields) => {
                 if (error) {
                     console.log(error);
-                    process.exit(1)
-                    // return callBack(error);
+                    // process.exit(1)
+                    return callBack(error);
                 }
-                // return callBack(null, results);
+                return callBack(null, results);
                 // console.log(data.cursor + "success");
                 // process.exit(1)
             }
