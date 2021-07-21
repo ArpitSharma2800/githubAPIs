@@ -5,7 +5,9 @@ const {
 const fs = require("fs");
 const {
     querycursor,
-    querys
+    querys,
+    queryPushed,
+    queryPushedAfter
 } = require('../graphQL/queryies');
 const {
     completedQuery
@@ -95,7 +97,7 @@ module.exports = {
                     // console.log("running search");
                     console.log(cursor);
                     var data = JSON.stringify({
-                        query: cursor == null ? querys(queryGit, first) : querycursor(queryGit, first, cursor),
+                        query: cursor == null ? queryPushed(queryGit, first) : queryPushedAfter(queryGit, first, cursor),
                         variables: {}
                     });
                     var config = {
@@ -166,7 +168,7 @@ function append(response) {
     // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
     //     return callback(error);
     // });
-    fs.appendFile(`./storedFile/1617.txt`, response, function (err) {
+    fs.appendFile(`./storedFile/1617p.txt`, response, function (err) {
         if (err) throw err;
         console.log("save")
     });
