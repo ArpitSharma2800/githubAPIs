@@ -160,7 +160,7 @@ module.exports = {
                     }
                 })
             });
-            append(dict, "1620IOSTopics")
+            append(dict, "1620andTopics")
             return res.status(200).json({
                 success: true,
                 dict
