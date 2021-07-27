@@ -135,13 +135,46 @@ module.exports = {
             success: true,
             dict
         });
+    },
+    topicsDict: async (req, res) => {
+        const {
+            filename
+        } = req.body
+        let dict = []
+        const fs = require('fs')
+        try {
+            const data = fs.readFileSync(`./storedFile/${filename}.txt`, 'utf8')
+            JSON.parse(data).forEach(element => {
+                // console.log(element.node.repositoryTopics.totalCount)
+                repoTopics = element.node.repositoryTopics.edges;
+                repoTopics.forEach(element2 => {
+                    console.log(element2.node.topic.name)
+                    const found = dict.find(el => el.tag === element2.node.topic.name);
+                    if (!found) {
+                        dict.push({
+                            tag: element2.node.topic.name,
+                            occurance: 1
+                        })
+                    } else {
+                        dict.find(v => v.tag === found["tag"]).occurance = found["occurance"] + 1;
+                    }
+                })
+            });
+            append(dict, "1620IOSTopics")
+            return res.status(200).json({
+                success: true,
+                dict
+            });
+        } catch (err) {
+            console.error(err)
+        }
     }
 
 }
 
 
-function append(response) {
-    fs.writeFile(`./dictionary/SODict.txt`, JSON.stringify(response), (err) => {
+function append(response, filename) {
+    fs.writeFile(`./dictionary/${filename}.txt`, JSON.stringify(response), (err) => {
         if (err) throw err;
         console.log("save")
     });
