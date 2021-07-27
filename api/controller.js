@@ -4,6 +4,9 @@ const {
     graphQlMulti
 } = require("./service");
 var axios = require('axios');
+const fs = require('fs');
+const readline = require('readline');
+
 module.exports = {
     serverCheck: (req, res) => {
         return res.status(200).json({
@@ -106,6 +109,44 @@ module.exports = {
                 results
             });
         })
+    },
+    soDict: async (req, res) => {
+        let dict = []
+        const fileStream = fs.createReadStream('androiost.txt');
+        const rl = readline.createInterface({
+            input: fileStream,
+            crlfDelay: Infinity
+        });
+        for await (const line of rl) {
+            var array = line.split(',');
+            const found = dict.find(el => el.tag === array[1]);
+            if (!found) {
+                dict.push({
+                    tag: array[1],
+                    occurance: parseInt(array[3])
+                })
+            } else {
+                dict.find(v => v.tag === found["tag"]).occurance = found["occurance"] + parseInt(array[3]);
+                console.log(array[3]);
+            }
+        }
+        await append(dict);
+        return res.status(200).json({
+            success: true,
+            dict
+        });
     }
 
+}
+
+
+function append(response) {
+    fs.writeFile(`./dictionary/SODict.txt`, JSON.stringify(response), (err) => {
+        if (err) throw err;
+        console.log("save")
+    });
+    // fs.appendFile(`./storedFile/1819ios.txt`, response, function (err) {
+    //     if (err) throw err;
+    //     console.log("save")
+    // });
 }
