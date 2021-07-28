@@ -138,7 +138,8 @@ module.exports = {
     },
     topicsDict: async (req, res) => {
         const {
-            filename
+            filename,
+            filetoname
         } = req.body
         let dict = []
         const fs = require('fs')
@@ -160,7 +161,7 @@ module.exports = {
                     }
                 })
             });
-            append(dict, "1620andTopics")
+            append(dict, filetoname)
             return res.status(200).json({
                 success: true,
                 dict
