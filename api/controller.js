@@ -143,7 +143,7 @@ module.exports = {
         let dict = []
         const fs = require('fs')
         try {
-            const data = fs.readFileSync(`./storedFile/${filename}.txt`, 'utf8')
+            const data = fs.readFileSync(`./ExtractedData/${filename}.txt`, 'utf8')
             JSON.parse(data).forEach(element => {
                 // console.log(element.node.repositoryTopics.totalCount)
                 repoTopics = element.node.repositoryTopics.edges;
@@ -161,6 +161,40 @@ module.exports = {
                 })
             });
             append(dict, "1620andTopics")
+            return res.status(200).json({
+                success: true,
+                dict
+            });
+        } catch (err) {
+            console.error(err)
+        }
+    },
+    langDict: async (req, res) => {
+        const {
+            filename,
+            filetoname
+        } = req.body
+        let dict = []
+        const fs = require('fs')
+        try {
+            const data = fs.readFileSync(`./ExtractedData/${filename}.txt`, 'utf8')
+            JSON.parse(data).forEach(element => {
+                // console.log(element.node.languages.edges)
+                repoTopics = element.node.languages.edges;
+                repoTopics.forEach(element2 => {
+                    console.log(element2.node.name)
+                    const found = dict.find(el => el.tag === element2.node.name);
+                    if (!found) {
+                        dict.push({
+                            tag: element2.node.name,
+                            occurance: 1
+                        })
+                    } else {
+                        dict.find(v => v.tag === found["tag"]).occurance = found["occurance"] + 1;
+                    }
+                })
+            });
+            append(dict, filetoname)
             return res.status(200).json({
                 success: true,
                 dict

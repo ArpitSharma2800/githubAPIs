@@ -4,7 +4,8 @@ const {
     repoGraphQL,
     repoGraphQLSingle,
     soDict,
-    topicsDict
+    topicsDict,
+    langDict
 } = require("./controller");
 
 const router = require("express").Router();
@@ -14,7 +15,8 @@ router.get("/repo", repository);
 router.post("/repoGraph", repoGraphQL);
 router.get("/repoGraphSingle/:query", repoGraphQLSingle);
 router.get("/sodictionary", soDict);
-router.post("/topicDict", topicsDict)
+router.post("/topicDict", topicsDict);
+router.post("/langDict", langDict);
 
 
 
