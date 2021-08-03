@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "SODict": "node -e 'require(\"./apiV2/app2\").soDict()'",
+    "check": "node -e 'require(\"./apiV2/app2\").serverCheck()'",
+    "extract": "node -e 'require(\"./apiV2/app2\").repoGraphQL()'",
+    "topicDict": "node -e 'require(\"./apiV2/app2\").topicsDict()'",
+    "langDict": "node -e 'require(\"./apiV2/app2\").langDict()'",
+    "description": "node -e 'require(\"./apiV2/app2\").description()'"
   },
   "author": "",
   "license": "MIT",
