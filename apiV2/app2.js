@@ -5,7 +5,6 @@ require("dotenv").config();
 module.exports = {
   serverCheck: (req, res) => {
     console.log("running");
-    console.log(process.env.GITHUB_TOKEN);
   },
   repoGraphQL: async () => {
     // const { query, cursor, first } = req.body;
@@ -34,11 +33,11 @@ module.exports = {
       if (!found) {
         dict.push({
           tag: array[1],
-          occurance: parseInt(array[3]),
+          occurence: parseInt(array[3]),
         });
       } else {
-        dict.find((v) => v.tag === found["tag"]).occurance =
-          found["occurance"] + parseInt(array[3]);
+        dict.find((v) => v.tag === found["tag"]).occurence =
+          found["occurence"] + parseInt(array[3]);
         console.log(array[3]);
       }
     }
@@ -57,11 +56,11 @@ module.exports = {
           if (!found) {
             dict.push({
               tag: element2.node.topic.name,
-              occurance: 1,
+              occurence: 1,
             });
           } else {
-            dict.find((v) => v.tag === found["tag"]).occurance =
-              found["occurance"] + 1;
+            dict.find((v) => v.tag === found["tag"]).occurence =
+              found["occurence"] + 1;
           }
         });
       });
@@ -84,11 +83,11 @@ module.exports = {
           if (!found) {
             dict.push({
               tag: element2.node.name,
-              occurance: 1,
+              occurence: 1,
             });
           } else {
-            dict.find((v) => v.tag === found["tag"]).occurance =
-              found["occurance"] + 1;
+            dict.find((v) => v.tag === found["tag"]).occurence =
+              found["occurence"] + 1;
           }
         });
       });
@@ -107,7 +106,7 @@ module.exports = {
       //JSON.stringify(dict, null, 4)
       // console.log(dict[0]);
       JSON.parse(data)
-        .slice(0, 2)
+        //.slice(0, 10)
         .forEach((element) => {
           // console.log(element.node.description);
           repoDesc = element.node.description;
@@ -135,11 +134,11 @@ module.exports = {
       if (!found) {
         mainDict.push({
           tag: element.tag.toLowerCase(),
-          occurance: element.occurance,
+          occurence: element.occurence,
         });
       } else {
-        mainDict.find((v) => v.tag === found["tag"]).occurance =
-          found["occurance"] + element.occurance;
+        mainDict.find((v) => v.tag === found["tag"]).occurence =
+          found["occurence"] + element.occurence;
       }
     });
     console.log("completed dict");
@@ -149,11 +148,11 @@ module.exports = {
       if (!found) {
         mainDict.push({
           tag: element.tag.toLowerCase(),
-          occurance: element.occurance,
+          occurence: element.occurence,
         });
       } else {
-        mainDict.find((v) => v.tag === found["tag"]).occurance =
-          found["occurance"] + element.occurance;
+        mainDict.find((v) => v.tag === found["tag"]).occurence =
+          found["occurence"] + element.occurence;
       }
     });
     console.log("completed dict 2");
@@ -163,11 +162,11 @@ module.exports = {
       if (!found) {
         mainDict.push({
           tag: element.tag.toLowerCase(),
-          occurance: element.occurance,
+          occurence: element.occurence,
         });
       } else {
-        mainDict.find((v) => v.tag === found["tag"]).occurance =
-          found["occurance"] + element.occurance;
+        mainDict.find((v) => v.tag === found["tag"]).occurence =
+          found["occurence"] + element.occurence;
       }
     });
     console.log("completed dict 3");
