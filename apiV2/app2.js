@@ -1,45 +1,6 @@
 const fs = require("fs");
 const { graphQlMulti } = require("./service/service");
 require("dotenv").config();
-var getTagsInDescription = function (dict, description) {
-  let res = [];
-  for (var j = 0; j < dict.length; j++) {
-    var _topic = dict[j].tag.toLowerCase();
-    var splittedTag = _topic.split("-");
-    var splittedDescription = description.toLowerCase().split(" ");
-    if (
-      arrayWithinArray(splittedTag, splittedDescription) ||
-      arrayIncludes(splittedDescription, _topic)
-    )
-      res.push(_topic);
-  }
-  return res;
-};
-
-var arrayIncludes = function (arr2, topic) {
-  var res = false;
-  if (arr2.length == 0) return false;
-  for (var j = 0; j < arr2.length; j++) {
-    if (arr2[j] == topic) {
-      return true;
-    }
-  }
-  return false;
-};
-
-var arrayWithinArray = function (arr1, arr2) {
-  var res = false;
-  if (arr1.length == 0) return false;
-  for (var j = 0; j < arr2.length; j++) {
-    if (arr2[j] == arr1[0]) {
-      var matched = 1;
-      for (var i = 1; i < arr1.length && j + i < arr2.length; i++)
-        if (arr1[i] == arr2[j + i]) matched++;
-      if (matched == arr1.length) return true;
-    }
-  }
-  return false;
-};
 
 module.exports = {
   serverCheck: (req, res) => {
@@ -213,6 +174,46 @@ module.exports = {
     await append2json(mainDict, "mainDictionary");
     await append2txt(mainDict, "mainDictionaryText");
   },
+};
+
+var getTagsInDescription = function (dict, description) {
+  let res = [];
+  for (var j = 0; j < dict.length; j++) {
+    var _topic = dict[j].tag.toLowerCase();
+    var splittedTag = _topic.split("-");
+    var splittedDescription = description.toLowerCase().split(" ");
+    if (
+      arrayWithinArray(splittedTag, splittedDescription) ||
+      arrayIncludes(splittedDescription, _topic)
+    )
+      res.push(_topic);
+  }
+  return res;
+};
+
+var arrayIncludes = function (arr2, topic) {
+  var res = false;
+  if (arr2.length == 0) return false;
+  for (var j = 0; j < arr2.length; j++) {
+    if (arr2[j] == topic) {
+      return true;
+    }
+  }
+  return false;
+};
+
+var arrayWithinArray = function (arr1, arr2) {
+  var res = false;
+  if (arr1.length == 0) return false;
+  for (var j = 0; j < arr2.length; j++) {
+    if (arr2[j] == arr1[0]) {
+      var matched = 1;
+      for (var i = 1; i < arr1.length && j + i < arr2.length; i++)
+        if (arr1[i] == arr2[j + i]) matched++;
+      if (matched == arr1.length) return true;
+    }
+  }
+  return false;
 };
 
 function append(response, filename) {

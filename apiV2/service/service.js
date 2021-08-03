@@ -100,3 +100,16 @@ function append2json(response, filetoname) {
     }
   );
 }
+function append2txt(response, filetoname) {
+  // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+  //     return callback(error);
+  // });
+  fs.appendFile(
+    `./ExtractedData/${filetoname}.txt`,
+    JSON.stringify(response, null, 4),
+    function (err) {
+      if (err) throw err;
+      console.log("save");
+    }
+  );
+}
