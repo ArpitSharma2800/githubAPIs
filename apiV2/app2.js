@@ -159,6 +159,60 @@ module.exports = {
       console.error(err);
     }
   },
+  mergeFile: async () => {
+    mainDict = [];
+    const dict = JSON.parse(fs.readFileSync(`./dictionary/SODict.txt`, "utf8"));
+    const dict2 = JSON.parse(
+      fs.readFileSync(`./dictionary/1620andiosLang.txt`, "utf8")
+    );
+    const dict3 = JSON.parse(
+      fs.readFileSync(`./dictionary/1620andiosTopics.txt`, "utf8")
+    );
+    await dict.forEach((element) => {
+      console.log(element.tag);
+      const found = mainDict.find((el) => el.tag === element.tag.toLowerCase());
+      if (!found) {
+        mainDict.push({
+          tag: element.tag.toLowerCase(),
+          occurance: element.occurance,
+        });
+      } else {
+        mainDict.find((v) => v.tag === found["tag"]).occurance =
+          found["occurance"] + element.occurance;
+      }
+    });
+    console.log("completed dict");
+    await dict2.forEach((element) => {
+      console.log(element.tag);
+      const found = mainDict.find((el) => el.tag === element.tag.toLowerCase());
+      if (!found) {
+        mainDict.push({
+          tag: element.tag.toLowerCase(),
+          occurance: element.occurance,
+        });
+      } else {
+        mainDict.find((v) => v.tag === found["tag"]).occurance =
+          found["occurance"] + element.occurance;
+      }
+    });
+    console.log("completed dict 2");
+    await dict3.forEach((element) => {
+      console.log(element.tag);
+      const found = mainDict.find((el) => el.tag === element.tag.toLowerCase());
+      if (!found) {
+        mainDict.push({
+          tag: element.tag.toLowerCase(),
+          occurance: element.occurance,
+        });
+      } else {
+        mainDict.find((v) => v.tag === found["tag"]).occurance =
+          found["occurance"] + element.occurance;
+      }
+    });
+    console.log("completed dict 3");
+    await append2json(mainDict, "mainDictionary");
+    await append2txt(mainDict, "mainDictionaryText");
+  },
 };
 
 function append(response, filename) {
@@ -169,6 +223,19 @@ function append(response, filename) {
   });
 }
 
+function append2txt(response, filetoname) {
+  // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+  //     return callback(error);
+  // });
+  fs.appendFile(
+    `./dictionary/${filetoname}.txt`,
+    JSON.stringify(response, null, 4),
+    function (err) {
+      if (err) throw err;
+      console.log("save");
+    }
+  );
+}
 function append2json(response, filetoname) {
   // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
   //     return callback(error);

@@ -10,7 +10,8 @@
     "extract": "node -e 'require(\"./apiV2/app2\").repoGraphQL()'",
     "topicDict": "node -e 'require(\"./apiV2/app2\").topicsDict()'",
     "langDict": "node -e 'require(\"./apiV2/app2\").langDict()'",
-    "description": "node -e 'require(\"./apiV2/app2\").description()'"
+    "description": "node -e 'require(\"./apiV2/app2\").description()'",
+    "merge": "node -e 'require(\"./apiV2/app2\").mergeFile()'"
   },
   "author": "",
   "license": "MIT",
