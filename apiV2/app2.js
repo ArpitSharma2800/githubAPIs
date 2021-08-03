@@ -99,25 +99,38 @@ module.exports = {
 
   description: () => {
     try {
-      const data = fs.readFileSync(`./ExtractedData/1620and.txt`, "utf8");
+      const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
       const dict = JSON.parse(
-        fs.readFileSync(`./dictionary/SODict.txt`, "utf8")
+        fs.readFileSync(`./dictionary/mainDictionaryText.txt`, "utf8")
       );
       //JSON.stringify(dict, null, 4)
       // console.log(dict[0]);
       JSON.parse(data)
-        //.slice(0, 10)
+        // .slice(0, 10)
         .forEach((element) => {
           // console.log(element.node.description);
           repoDesc = element.node.description;
           if (repoDesc !== null) {
             receivedData = getTagsInDescription(dict, repoDesc);
+            const responses = {
+              nameWithOwner: element.node.nameWithOwner,
+              description: element.node.description,
+              tag: receivedData,
+            };
+            append2jsonCSV(responses, "extractedData");
             console.log(repoDesc, "\n\t " + receivedData);
           }
         });
     } catch (err) {
       console.error(err);
     }
+  },
+  JSON2CSV: () => {
+    var data = require("../description/extractedData.json");
+    // console.log(data);
+    const JSONToCSV = require("json2csv").parse;
+    var csv = JSONToCSV(data);
+    fs.writeFileSync("./description/data.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
@@ -242,6 +255,19 @@ function append2json(response, filetoname) {
   // });
   fs.appendFile(
     `./dictionary/${filetoname}.json`,
+    JSON.stringify(response, null, 4),
+    function (err) {
+      if (err) throw err;
+      console.log("save");
+    }
+  );
+}
+function append2jsonCSV(response, filetoname) {
+  // FileSystem.writeFile(`./storedFile/${filename}.json`, JSON.stringify(response.data.data.search.edges), (error) => {
+  //     return callback(error);
+  // });
+  fs.appendFile(
+    `./description/${filetoname}.json`,
     JSON.stringify(response, null, 4),
     function (err) {
       if (err) throw err;
