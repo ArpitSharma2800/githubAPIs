@@ -10,26 +10,31 @@ module.exports = {
   repoGraphQL: async () => {
     // const { query, cursor, first } = req.body;
     let createdDate = moment("01-01-2016", "DD-MM-YYYY");
-    let endDate = moment("05-01-2016", "DD-MM-YYYY");
+    let endDate = moment("02-01-2016", "DD-MM-YYYY");
+    // ${createdDate.format("YYYY-MM-DD")}
     const data = {
       query: `android created:${createdDate.format("YYYY-MM-DD")} stars:>=3`,
+      keyword: "android",
+      stars: ">=3",
+      startDate: createdDate,
+      endDate: endDate.format("YYYY-MM-DD"),
       cursor: null,
       first: 10,
     };
-    // for (var i = 0; i < 10; i++) {
+    var k = true;
+    // console.log(
+    //   moment(createdDate.format("YYYY-MM-DD")).isSameOrBefore(endDate)
+    // );
     //   createdDate = moment(createdDate).add(1, "d");
     //   console.log(createdDate.format("YYYY-MM-DD"));
-    // }
-    while (createdDate <= endDate) {
-      graphQlMulti(data, (err, results) => {
-        if (err) {
-          console.log(err);
-        }
-        console.log(results);
-        createdDate = moment(createdDate).add(1, "d");
-        console.log(createdDate.format("YYYY-MM-DD"));
-      });
-    }
+    graphQlMulti2(data, (err, results) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(results);
+      createdDate = moment(createdDate).add(1, "d");
+      console.log(createdDate.format("YYYY-MM-DD"));
+    });
   },
   soDict: async () => {
     let dict = [];
