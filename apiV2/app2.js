@@ -1,5 +1,6 @@
 const fs = require("fs");
-const { graphQlMulti } = require("./service/service");
+const moment = require("moment");
+const { graphQlMulti, graphQlMulti2 } = require("./service/service");
 require("dotenv").config();
 
 module.exports = {
@@ -8,17 +9,27 @@ module.exports = {
   },
   repoGraphQL: async () => {
     // const { query, cursor, first } = req.body;
+    let createdDate = moment("01-01-2016", "DD-MM-YYYY");
+    let endDate = moment("05-01-2016", "DD-MM-YYYY");
     const data = {
-      query: "android pushed:2016-01-01..2020-12-31 stars:>=3",
+      query: `android created:${createdDate.format("YYYY-MM-DD")} stars:>=3`,
       cursor: null,
       first: 10,
     };
-    graphQlMulti(data, (err, results) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(results);
-    });
+    // for (var i = 0; i < 10; i++) {
+    //   createdDate = moment(createdDate).add(1, "d");
+    //   console.log(createdDate.format("YYYY-MM-DD"));
+    // }
+    while (createdDate <= endDate) {
+      graphQlMulti(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+        createdDate = moment(createdDate).add(1, "d");
+        console.log(createdDate.format("YYYY-MM-DD"));
+      });
+    }
   },
   soDict: async () => {
     let dict = [];

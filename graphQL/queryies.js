@@ -4,7 +4,7 @@ function querys(queryGit, first) {
           limit
           cost
           remaining
-          used
+          used  
           resetAt
           nodeCount
         }
@@ -123,9 +123,8 @@ function querys(queryGit, first) {
           }
         }
       }
-      `
+      `;
 }
-
 
 function querycursor(queryGit, first, cursor) {
   return `{
@@ -252,7 +251,7 @@ function querycursor(queryGit, first, cursor) {
           }
         }
       }
-      `
+      `;
 }
 
 function queryPushed(queryGit, first) {
@@ -385,9 +384,8 @@ function queryPushed(queryGit, first) {
         }
       }
     }
-  }`
+  }`;
 }
-
 
 function queryPushedAfter(queryGit, first, cursor) {
   return `{
@@ -519,12 +517,12 @@ function queryPushedAfter(queryGit, first, cursor) {
         }
       }
     }
-  }`
+  }`;
 }
 
 module.exports = {
   querys,
   querycursor,
   queryPushed,
-  queryPushedAfter
+  queryPushedAfter,
 };

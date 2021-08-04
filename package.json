@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "file-system": "^2.2.2",
     "json2csv": "^5.0.6",
+    "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "swagger": "^0.7.5",
     "swagger-ui-express": "^4.1.6",
