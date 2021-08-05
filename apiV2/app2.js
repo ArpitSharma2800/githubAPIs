@@ -6,11 +6,15 @@ require("dotenv").config();
 module.exports = {
   serverCheck: (req, res) => {
     console.log("running");
+    const data = require("../NewData/2016and.json");
+    data.forEach((ele, i) => {
+      console.log(i);
+    });
   },
   repoGraphQL: async () => {
     // const { query, cursor, first } = req.body;
     let createdDate = moment("01-01-2016", "DD-MM-YYYY");
-    let endDate = moment("02-01-2016", "DD-MM-YYYY");
+    let endDate = moment("31-12-2016", "DD-MM-YYYY");
     // ${createdDate.format("YYYY-MM-DD")}
     const data = {
       query: `android created:${createdDate.format("YYYY-MM-DD")} stars:>=3`,

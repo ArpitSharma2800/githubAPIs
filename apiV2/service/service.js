@@ -25,24 +25,20 @@ module.exports = {
       moment(startDate.format("YYYY-MM-DD")).isSameOrBefore(endDate) === true
     ) {
       console.log(startDate);
-      // updateQuery = `android created:${startDate.format(
-      //   "YYYY-MM-DD"
-      // )} stars:>=3`;
-
       hasNextpage = true;
       cursor = null;
-      updateQuery =
-        keyword +
-        " created:" +
-        startDate.format("YYYY-MM-DD") +
-        " stars:" +
-        stars;
-      console.log(startDate);
       while (hasNextpage == true) {
+        let updateQuery =
+          keyword +
+          " created:" +
+          startDate.format("YYYY-MM-DD") +
+          " stars:" +
+          stars;
+        console.log(updateQuery);
         try {
           console.log(n);
           console.log(cursor);
-          console.log(queryGit);
+          console.log(updateQuery);
           var data = JSON.stringify({
             query:
               cursor == null
@@ -52,42 +48,51 @@ module.exports = {
             // : queryPushedAfter(queryGit, first, cursor),
             variables: {},
           });
+          var token = [
+            process.env.GITHUB_TOKEN,
+            process.env.GITHUB_TOKEN2,
+            process.env.GITHUB_TOKEN3,
+            process.env.GITHUB_TOKEN4,
+            process.env.GITHUB_TOKEN5,
+          ];
+          const random = Math.floor(Math.random() * token.length);
           var config = {
             method: "post",
             url: "https://api.github.com/graphql",
             headers: {
-              Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+              Authorization: `Bearer ${token[random]}`,
               "Content-Type": "application/json",
             },
             data: data,
           };
           await axios(config)
-            .then(function (response) {
-              console.log(response.data.data.search);
+            .then(async function (response) {
+              // console.log(response.data.data.search);
               cursor = response.data.data.search.pageInfo.endCursor;
               hasNextpage = response.data.data.search.pageInfo.hasNextPage;
               limit = response.data.data.rateLimit.remaining;
               nodeCount = response.data.data.rateLimit.nodeCount;
-              // responses.push(JSON.stringify(response.data.data.search.edges));
-              // try {
-              //   const dbData = {
-              //     query: queryGit,
-              //     cursor: cursor || "first query",
-              //     hasLastPage: hasNextpage,
-              //     limitremaining: limit || -1,
-              //     nodeCount: nodeCount || -1,
-              //   };
-              //   completedQuery(dbData, (err, results) => {
-              //     if (err) {
-              //       console.log(err);
-              //     }
-              //     console.log("db push completed final");
-              //   });
-              // } catch (error) {
-              //   console.log(error);
-              // }
-              // append2json(response.data.data.search.edges, "2016and");
-              // append2txt(response.data.data.search.edges, "2016and");
+              responses.push(JSON.stringify(response.data.data.search.edges));
+              try {
+                const dbData = {
+                  query: updateQuery,
+                  cursor: cursor || "first query",
+                  hasLastPage: hasNextpage,
+                  limitremaining: limit || -1,
+                  nodeCount: nodeCount || -1,
+                  date: startDate.format("YYYY-MM-DD"),
+                };
+                await completedQuery(dbData, (err, results) => {
+                  if (err) {
+                    console.log(err);
+                  }
+                  console.log("db push complete");
+                });
+              } catch (error) {
+                console.log(error);
+              }
+              append2json(response.data.data.search.edges, "2016and");
+              append2txt(response.data.data.search.edges, "2016and");
             })
             .catch(function (err) {
               console.log(err);
