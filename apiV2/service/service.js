@@ -91,8 +91,8 @@ module.exports = {
               } catch (error) {
                 console.log(error);
               }
-              append2json(response.data.data.search.edges, "2016and");
-              append2txt(response.data.data.search.edges, "2016and");
+              append2json(response.data.data.search.edges, "2020ios");
+              append2txt(response.data.data.search.edges, "2020ios");
             })
             .catch(function (err) {
               console.log(err);

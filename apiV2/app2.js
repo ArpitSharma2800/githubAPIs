@@ -6,26 +6,25 @@ require("dotenv").config();
 module.exports = {
   serverCheck: (req, res) => {
     console.log("running");
-    const data = require("../NewData/2016and.json");
+    const data = require("../NewData/2020ios.json");
     data.forEach((ele, i) => {
       console.log(i);
     });
   },
   repoGraphQL: async () => {
     // const { query, cursor, first } = req.body;
-    let createdDate = moment("01-01-2016", "DD-MM-YYYY");
-    let endDate = moment("31-12-2016", "DD-MM-YYYY");
+    let createdDate = moment("01-01-2020", "DD-MM-YYYY");
+    let endDate = moment("31-12-2020", "DD-MM-YYYY");
     // ${createdDate.format("YYYY-MM-DD")}
     const data = {
       query: `android created:${createdDate.format("YYYY-MM-DD")} stars:>=3`,
-      keyword: "android",
+      keyword: "ios",
       stars: ">=3",
       startDate: createdDate,
       endDate: endDate.format("YYYY-MM-DD"),
       cursor: null,
       first: 10,
     };
-    var k = true;
     // console.log(
     //   moment(createdDate.format("YYYY-MM-DD")).isSameOrBefore(endDate)
     // );
@@ -39,6 +38,33 @@ module.exports = {
       createdDate = moment(createdDate).add(1, "d");
       console.log(createdDate.format("YYYY-MM-DD"));
     });
+  },
+  concatJson: async () => {
+    let mainFile = [];
+    const data = fs.readFileSync(`./NewData/2016and.txt`, "utf8");
+    const data2 = fs.readFileSync(`./NewData/2017and.txt`, "utf8");
+    const data3 = fs.readFileSync(`./NewData/2018and.txt`, "utf8");
+    const data4 = fs.readFileSync(`./NewData/2019and.txt`, "utf8");
+    const data5 = fs.readFileSync(`./NewData/2020and.txt`, "utf8");
+    const data6 = fs.readFileSync(`./NewData/2016ios.txt`, "utf8");
+    const data7 = fs.readFileSync(`./NewData/2017ios.txt`, "utf8");
+    const data8 = fs.readFileSync(`./NewData/2018ios.txt`, "utf8");
+    const data9 = fs.readFileSync(`./NewData/2019ios.txt`, "utf8");
+    const data10 = fs.readFileSync(`./NewData/2020ios.txt`, "utf8");
+    mainFile = mainFile.concat(
+      data,
+      data2,
+      data3,
+      data4,
+      data5,
+      data6,
+      data8,
+      data7,
+      data9,
+      data9,
+      data10
+    );
+    await append2json(mainFile, "MainFile");
   },
   soDict: async () => {
     let dict = [];
@@ -65,26 +91,43 @@ module.exports = {
   },
   topicsDict: async () => {
     let dict = [];
+    extract = [
+      "./NewData/2016and.txt",
+      "./NewData/2017and.txt",
+      "./NewData/2018and.txt",
+      "./NewData/2019and.txt",
+      "./NewData/2020and.txt",
+      "./NewData/2016ios.txt",
+      "./NewData/2017ios.txt",
+      "./NewData/2018ios.txt",
+      "./NewData/2019ios.txt",
+      "./NewData/2020ios.txt",
+    ];
     try {
-      const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
-      JSON.parse(data).forEach((element) => {
-        // console.log(element.node.repositoryTopics.totalCount)
-        repoTopics = element.node.repositoryTopics.edges;
-        repoTopics.forEach((element2) => {
-          console.log(element2.node.topic.name);
-          const found = dict.find((el) => el.tag === element2.node.topic.name);
-          if (!found) {
-            dict.push({
-              tag: element2.node.topic.name,
-              occurence: 1,
-            });
-          } else {
-            dict.find((v) => v.tag === found["tag"]).occurence =
-              found["occurence"] + 1;
-          }
+      extract.forEach((elem, i) => {
+        console.log(elem);
+        const data = fs.readFileSync(elem, "utf8");
+        JSON.parse(data).forEach((element) => {
+          // console.log(element.node.repositoryTopics.edges);
+          repoTopics = element.node.repositoryTopics.edges;
+          repoTopics.forEach((element2) => {
+            console.log(element2.node.topic.name);
+            const found = dict.find(
+              (el) => el.tag === element2.node.topic.name
+            );
+            if (!found) {
+              dict.push({
+                tag: element2.node.topic.name,
+                occurence: 1,
+              });
+            } else {
+              dict.find((v) => v.tag === found["tag"]).occurence =
+                found["occurence"] + 1;
+            }
+          });
         });
       });
-      append2json(dict, "2016-20Topic");
+      append2json(dict, "201620Topic");
     } catch (err) {
       console.error(err);
     }
@@ -274,7 +317,7 @@ function append2json(response, filetoname) {
   //     return callback(error);
   // });
   fs.appendFile(
-    `./dictionary/${filetoname}.json`,
+    `./newDictionary/${filetoname}.json`,
     JSON.stringify(response, null, 4),
     function (err) {
       if (err) throw err;

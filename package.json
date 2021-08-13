@@ -8,11 +8,12 @@
     "SODict": "node -e 'require(\"./apiV2/app2\").soDict()'",
     "check": "node -e 'require(\"./apiV2/app2\").serverCheck()'",
     "extract": "node -e 'require(\"./apiV2/app2\").repoGraphQL()'",
-    "topicDict": "node -e 'require(\"./apiV2/app2\").topicsDict()'",
+    "topic": "node -e 'require(\"./apiV2/app2\").topicsDict()'",
     "langDict": "node -e 'require(\"./apiV2/app2\").langDict()'",
     "description": "node -e 'require(\"./apiV2/app2\").description()'",
     "merge": "node -e 'require(\"./apiV2/app2\").mergeFile()'",
-    "jtc": "node -e 'require(\"./apiV2/app2\").JSON2CSV()'"
+    "jtc": "node -e 'require(\"./apiV2/app2\").JSON2CSV()'",
+    "mainMerge": "node -e 'require(\"./apiV2/app2\").concatJson()'"
   },
   "author": "",
   "license": "MIT",
