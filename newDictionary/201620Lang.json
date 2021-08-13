@@ -1,0 +1,1162 @@
+[
+    {
+        "tag": "Java",
+        "occurence": 46459
+    },
+    {
+        "tag": "Shell",
+        "occurence": 12944
+    },
+    {
+        "tag": "JavaScript",
+        "occurence": 11771
+    },
+    {
+        "tag": "Python",
+        "occurence": 7612
+    },
+    {
+        "tag": "Scala",
+        "occurence": 82
+    },
+    {
+        "tag": "Makefile",
+        "occurence": 7083
+    },
+    {
+        "tag": "C",
+        "occurence": 9657
+    },
+    {
+        "tag": "CSS",
+        "occurence": 4224
+    },
+    {
+        "tag": "HTML",
+        "occurence": 8105
+    },
+    {
+        "tag": "Groff",
+        "occurence": 144
+    },
+    {
+        "tag": "Yacc",
+        "occurence": 923
+    },
+    {
+        "tag": "Lex",
+        "occurence": 916
+    },
+    {
+        "tag": "TypeScript",
+        "occurence": 2125
+    },
+    {
+        "tag": "Ruby",
+        "occurence": 15524
+    },
+    {
+        "tag": "Objective-C",
+        "occurence": 21150
+    },
+    {
+        "tag": "Eagle",
+        "occurence": 4
+    },
+    {
+        "tag": "Arduino",
+        "occurence": 100
+    },
+    {
+        "tag": "Kotlin",
+        "occurence": 15808
+    },
+    {
+        "tag": "C++",
+        "occurence": 7896
+    },
+    {
+        "tag": "TeX",
+        "occurence": 184
+    },
+    {
+        "tag": "Forth",
+        "occurence": 316
+    },
+    {
+        "tag": "Swift",
+        "occurence": 16873
+    },
+    {
+        "tag": "Go",
+        "occurence": 606
+    },
+    {
+        "tag": "Common Lisp",
+        "occurence": 26
+    },
+    {
+        "tag": "C#",
+        "occurence": 2873
+    },
+    {
+        "tag": "Smalltalk",
+        "occurence": 139
+    },
+    {
+        "tag": "AIDL",
+        "occurence": 187
+    },
+    {
+        "tag": "PHP",
+        "occurence": 955
+    },
+    {
+        "tag": "CMake",
+        "occurence": 2969
+    },
+    {
+        "tag": "Cuda",
+        "occurence": 84
+    },
+    {
+        "tag": "Rich Text Format",
+        "occurence": 150
+    },
+    {
+        "tag": "QMake",
+        "occurence": 264
+    },
+    {
+        "tag": "Batchfile",
+        "occurence": 1752
+    },
+    {
+        "tag": "QML",
+        "occurence": 174
+    },
+    {
+        "tag": "Roff",
+        "occurence": 1277
+    },
+    {
+        "tag": "GDB",
+        "occurence": 775
+    },
+    {
+        "tag": "Assembly",
+        "occurence": 1537
+    },
+    {
+        "tag": "Perl",
+        "occurence": 1399
+    },
+    {
+        "tag": "Clojure",
+        "occurence": 461
+    },
+    {
+        "tag": "Awk",
+        "occurence": 943
+    },
+    {
+        "tag": "SourcePawn",
+        "occurence": 224
+    },
+    {
+        "tag": "Brainfuck",
+        "occurence": 12
+    },
+    {
+        "tag": "UnrealScript",
+        "occurence": 785
+    },
+    {
+        "tag": "Scilab",
+        "occurence": 467
+    },
+    {
+        "tag": "ASP",
+        "occurence": 288
+    },
+    {
+        "tag": "M4",
+        "occurence": 1402
+    },
+    {
+        "tag": "PostScript",
+        "occurence": 41
+    },
+    {
+        "tag": "RenderScript",
+        "occurence": 132
+    },
+    {
+        "tag": "Fortran",
+        "occurence": 38
+    },
+    {
+        "tag": "OCaml",
+        "occurence": 26
+    },
+    {
+        "tag": "Groovy",
+        "occurence": 579
+    },
+    {
+        "tag": "GAP",
+        "occurence": 28
+    },
+    {
+        "tag": "Nix",
+        "occurence": 35
+    },
+    {
+        "tag": "GLSL",
+        "occurence": 796
+    },
+    {
+        "tag": "Processing",
+        "occurence": 38
+    },
+    {
+        "tag": "Smali",
+        "occurence": 114
+    },
+    {
+        "tag": "Lua",
+        "occurence": 283
+    },
+    {
+        "tag": "Meson",
+        "occurence": 39
+    },
+    {
+        "tag": "Dockerfile",
+        "occurence": 831
+    },
+    {
+        "tag": "Objective-C++",
+        "occurence": 1803
+    },
+    {
+        "tag": "Vim script",
+        "occurence": 61
+    },
+    {
+        "tag": "SWIG",
+        "occurence": 56
+    },
+    {
+        "tag": "ActionScript",
+        "occurence": 122
+    },
+    {
+        "tag": "PLpgSQL",
+        "occurence": 63
+    },
+    {
+        "tag": "AngelScript",
+        "occurence": 25
+    },
+    {
+        "tag": "Hack",
+        "occurence": 49
+    },
+    {
+        "tag": "TSQL",
+        "occurence": 110
+    },
+    {
+        "tag": "FreeMarker",
+        "occurence": 170
+    },
+    {
+        "tag": "Prolog",
+        "occurence": 256
+    },
+    {
+        "tag": "Starlark",
+        "occurence": 1221
+    },
+    {
+        "tag": "Visual Basic",
+        "occurence": 54
+    },
+    {
+        "tag": "PLSQL",
+        "occurence": 42
+    },
+    {
+        "tag": "R",
+        "occurence": 51
+    },
+    {
+        "tag": "Protocol Buffer",
+        "occurence": 97
+    },
+    {
+        "tag": "Jupyter Notebook",
+        "occurence": 276
+    },
+    {
+        "tag": "GCC Machine Description",
+        "occurence": 16
+    },
+    {
+        "tag": "IDL",
+        "occurence": 110
+    },
+    {
+        "tag": "F#",
+        "occurence": 89
+    },
+    {
+        "tag": "XSLT",
+        "occurence": 165
+    },
+    {
+        "tag": "PowerShell",
+        "occurence": 352
+    },
+    {
+        "tag": "Gnuplot",
+        "occurence": 17
+    },
+    {
+        "tag": "MATLAB",
+        "occurence": 166
+    },
+    {
+        "tag": "CoffeeScript",
+        "occurence": 64
+    },
+    {
+        "tag": "Perl 6",
+        "occurence": 367
+    },
+    {
+        "tag": "Verilog",
+        "occurence": 36
+    },
+    {
+        "tag": "NSIS",
+        "occurence": 57
+    },
+    {
+        "tag": "Pascal",
+        "occurence": 226
+    },
+    {
+        "tag": "PureBasic",
+        "occurence": 71
+    },
+    {
+        "tag": "AutoIt",
+        "occurence": 5
+    },
+    {
+        "tag": "SAS",
+        "occurence": 57
+    },
+    {
+        "tag": "CLIPS",
+        "occurence": 17
+    },
+    {
+        "tag": "DIGITAL Command Language",
+        "occurence": 104
+    },
+    {
+        "tag": "Module Management System",
+        "occurence": 74
+    },
+    {
+        "tag": "Vue",
+        "occurence": 444
+    },
+    {
+        "tag": "SCSS",
+        "occurence": 400
+    },
+    {
+        "tag": "HLSL",
+        "occurence": 121
+    },
+    {
+        "tag": "Pan",
+        "occurence": 4
+    },
+    {
+        "tag": "Mathematica",
+        "occurence": 21
+    },
+    {
+        "tag": "AGS Script",
+        "occurence": 16
+    },
+    {
+        "tag": "xBase",
+        "occurence": 16
+    },
+    {
+        "tag": "Tcl",
+        "occurence": 67
+    },
+    {
+        "tag": "VBScript",
+        "occurence": 39
+    },
+    {
+        "tag": "ApacheConf",
+        "occurence": 36
+    },
+    {
+        "tag": "Gherkin",
+        "occurence": 427
+    },
+    {
+        "tag": "ANTLR",
+        "occurence": 31
+    },
+    {
+        "tag": "Logos",
+        "occurence": 551
+    },
+    {
+        "tag": "OpenEdge ABL",
+        "occurence": 26
+    },
+    {
+        "tag": "WebAssembly",
+        "occurence": 28
+    },
+    {
+        "tag": "StringTemplate",
+        "occurence": 8
+    },
+    {
+        "tag": "SQLPL",
+        "occurence": 20
+    },
+    {
+        "tag": "Ada",
+        "occurence": 28
+    },
+    {
+        "tag": "Rebol",
+        "occurence": 7
+    },
+    {
+        "tag": "Haxe",
+        "occurence": 42
+    },
+    {
+        "tag": "Scheme",
+        "occurence": 47
+    },
+    {
+        "tag": "sed",
+        "occurence": 538
+    },
+    {
+        "tag": "Thrift",
+        "occurence": 13
+    },
+    {
+        "tag": "AppleScript",
+        "occurence": 51
+    },
+    {
+        "tag": "M",
+        "occurence": 19
+    },
+    {
+        "tag": "Rust",
+        "occurence": 208
+    },
+    {
+        "tag": "Emacs Lisp",
+        "occurence": 86
+    },
+    {
+        "tag": "Smarty",
+        "occurence": 81
+    },
+    {
+        "tag": "Standard ML",
+        "occurence": 13
+    },
+    {
+        "tag": "Haskell",
+        "occurence": 40
+    },
+    {
+        "tag": "Pawn",
+        "occurence": 37
+    },
+    {
+        "tag": "Mercury",
+        "occurence": 4
+    },
+    {
+        "tag": "VHDL",
+        "occurence": 6
+    },
+    {
+        "tag": "POV-Ray SDL",
+        "occurence": 14
+    },
+    {
+        "tag": "EmberScript",
+        "occurence": 3
+    },
+    {
+        "tag": "Ceylon",
+        "occurence": 5
+    },
+    {
+        "tag": "GDScript",
+        "occurence": 47
+    },
+    {
+        "tag": "XC",
+        "occurence": 53
+    },
+    {
+        "tag": "XS",
+        "occurence": 648
+    },
+    {
+        "tag": "eC",
+        "occurence": 35
+    },
+    {
+        "tag": "Less",
+        "occurence": 63
+    },
+    {
+        "tag": "ShaderLab",
+        "occurence": 216
+    },
+    {
+        "tag": "Jsonnet",
+        "occurence": 6
+    },
+    {
+        "tag": "Boo",
+        "occurence": 2
+    },
+    {
+        "tag": "NewLisp",
+        "occurence": 8
+    },
+    {
+        "tag": "Julia",
+        "occurence": 8
+    },
+    {
+        "tag": "Limbo",
+        "occurence": 14
+    },
+    {
+        "tag": "Erlang",
+        "occurence": 5
+    },
+    {
+        "tag": "LOLCODE",
+        "occurence": 2
+    },
+    {
+        "tag": "D",
+        "occurence": 28
+    },
+    {
+        "tag": "Racket",
+        "occurence": 3
+    },
+    {
+        "tag": "Dart",
+        "occurence": 3879
+    },
+    {
+        "tag": "Elixir",
+        "occurence": 22
+    },
+    {
+        "tag": "Crystal",
+        "occurence": 9
+    },
+    {
+        "tag": "Idris",
+        "occurence": 3
+    },
+    {
+        "tag": "HyPhy",
+        "occurence": 3
+    },
+    {
+        "tag": "PureScript",
+        "occurence": 3
+    },
+    {
+        "tag": "VBA",
+        "occurence": 8
+    },
+    {
+        "tag": "Pug",
+        "occurence": 15
+    },
+    {
+        "tag": "Visual Basic .NET",
+        "occurence": 13
+    },
+    {
+        "tag": "MAXScript",
+        "occurence": 7
+    },
+    {
+        "tag": "Jasmin",
+        "occurence": 16
+    },
+    {
+        "tag": "Inno Setup",
+        "occurence": 51
+    },
+    {
+        "tag": "Xtend",
+        "occurence": 1
+    },
+    {
+        "tag": "Puppet",
+        "occurence": 8
+    },
+    {
+        "tag": "Haml",
+        "occurence": 1
+    },
+    {
+        "tag": "MoonScript",
+        "occurence": 1
+    },
+    {
+        "tag": "SuperCollider",
+        "occurence": 6
+    },
+    {
+        "tag": "BlitzBasic",
+        "occurence": 4
+    },
+    {
+        "tag": "Blade",
+        "occurence": 8
+    },
+    {
+        "tag": "SmPL",
+        "occurence": 381
+    },
+    {
+        "tag": "Raku",
+        "occurence": 354
+    },
+    {
+        "tag": "AspectJ",
+        "occurence": 5
+    },
+    {
+        "tag": "Game Maker Language",
+        "occurence": 3
+    },
+    {
+        "tag": "AutoHotkey",
+        "occurence": 5
+    },
+    {
+        "tag": "REXX",
+        "occurence": 1
+    },
+    {
+        "tag": "Component Pascal",
+        "occurence": 1
+    },
+    {
+        "tag": "Nginx",
+        "occurence": 6
+    },
+    {
+        "tag": "EJS",
+        "occurence": 39
+    },
+    {
+        "tag": "LLVM",
+        "occurence": 30
+    },
+    {
+        "tag": "Agda",
+        "occurence": 1
+    },
+    {
+        "tag": "Isabelle",
+        "occurence": 1
+    },
+    {
+        "tag": "F*",
+        "occurence": 1
+    },
+    {
+        "tag": "Coq",
+        "occurence": 7
+    },
+    {
+        "tag": "Twig",
+        "occurence": 2
+    },
+    {
+        "tag": "Objective-J",
+        "occurence": 9
+    },
+    {
+        "tag": "YARA",
+        "occurence": 5
+    },
+    {
+        "tag": "Ragel",
+        "occurence": 13
+    },
+    {
+        "tag": "CWeb",
+        "occurence": 8
+    },
+    {
+        "tag": "Clean",
+        "occurence": 8
+    },
+    {
+        "tag": "RUNOFF",
+        "occurence": 3
+    },
+    {
+        "tag": "DM",
+        "occurence": 3
+    },
+    {
+        "tag": "Charity",
+        "occurence": 3
+    },
+    {
+        "tag": "Asymptote",
+        "occurence": 3
+    },
+    {
+        "tag": "NASL",
+        "occurence": 34
+    },
+    {
+        "tag": "Handlebars",
+        "occurence": 25
+    },
+    {
+        "tag": "Slim",
+        "occurence": 5
+    },
+    {
+        "tag": "E",
+        "occurence": 2
+    },
+    {
+        "tag": "Uno",
+        "occurence": 8
+    },
+    {
+        "tag": "DTrace",
+        "occurence": 76
+    },
+    {
+        "tag": "Web Ontology Language",
+        "occurence": 1
+    },
+    {
+        "tag": "Mako",
+        "occurence": 23
+    },
+    {
+        "tag": "Classic ASP",
+        "occurence": 41
+    },
+    {
+        "tag": "CartoCSS",
+        "occurence": 2
+    },
+    {
+        "tag": "Solidity",
+        "occurence": 15
+    },
+    {
+        "tag": "RobotFramework",
+        "occurence": 4
+    },
+    {
+        "tag": "Mask",
+        "occurence": 5
+    },
+    {
+        "tag": "FreeBasic",
+        "occurence": 2
+    },
+    {
+        "tag": "Csound Document",
+        "occurence": 10
+    },
+    {
+        "tag": "Elm",
+        "occurence": 3
+    },
+    {
+        "tag": "Io",
+        "occurence": 1
+    },
+    {
+        "tag": "Frege",
+        "occurence": 5
+    },
+    {
+        "tag": "VCL",
+        "occurence": 8
+    },
+    {
+        "tag": "Ragel in Ruby Host",
+        "occurence": 1
+    },
+    {
+        "tag": "Stylus",
+        "occurence": 9
+    },
+    {
+        "tag": "HCL",
+        "occurence": 13
+    },
+    {
+        "tag": "LSL",
+        "occurence": 2
+    },
+    {
+        "tag": "RPC",
+        "occurence": 18
+    },
+    {
+        "tag": "Mustache",
+        "occurence": 27
+    },
+    {
+        "tag": "LabVIEW",
+        "occurence": 3
+    },
+    {
+        "tag": "1C Enterprise",
+        "occurence": 10
+    },
+    {
+        "tag": "Nim",
+        "occurence": 16
+    },
+    {
+        "tag": "Svelte",
+        "occurence": 11
+    },
+    {
+        "tag": "Sass",
+        "occurence": 15
+    },
+    {
+        "tag": "RAML",
+        "occurence": 1
+    },
+    {
+        "tag": "Nunjucks",
+        "occurence": 10
+    },
+    {
+        "tag": "JSONiq",
+        "occurence": 1
+    },
+    {
+        "tag": "BitBake",
+        "occurence": 3
+    },
+    {
+        "tag": "KiCad Layout",
+        "occurence": 1
+    },
+    {
+        "tag": "KiCad Schematic",
+        "occurence": 1
+    },
+    {
+        "tag": "ASP.NET",
+        "occurence": 12
+    },
+    {
+        "tag": "Fluent",
+        "occurence": 3
+    },
+    {
+        "tag": "Metal",
+        "occurence": 223
+    },
+    {
+        "tag": "Stata",
+        "occurence": 9
+    },
+    {
+        "tag": "V",
+        "occurence": 10
+    },
+    {
+        "tag": "ASL",
+        "occurence": 7
+    },
+    {
+        "tag": "Max",
+        "occurence": 11
+    },
+    {
+        "tag": "COBOL",
+        "occurence": 2
+    },
+    {
+        "tag": "Cap'n Proto",
+        "occurence": 1
+    },
+    {
+        "tag": "Clarion",
+        "occurence": 4
+    },
+    {
+        "tag": "Jinja",
+        "occurence": 18
+    },
+    {
+        "tag": "Ren'Py",
+        "occurence": 3
+    },
+    {
+        "tag": "AMPL",
+        "occurence": 4
+    },
+    {
+        "tag": "Csound",
+        "occurence": 2
+    },
+    {
+        "tag": "Vala",
+        "occurence": 3
+    },
+    {
+        "tag": "Self",
+        "occurence": 1
+    },
+    {
+        "tag": "jq",
+        "occurence": 2
+    },
+    {
+        "tag": "CodeQL",
+        "occurence": 2
+    },
+    {
+        "tag": "API Blueprint",
+        "occurence": 3
+    },
+    {
+        "tag": "Cool",
+        "occurence": 2
+    },
+    {
+        "tag": "Reason",
+        "occurence": 6
+    },
+    {
+        "tag": "nesC",
+        "occurence": 4
+    },
+    {
+        "tag": "Gradle",
+        "occurence": 2
+    },
+    {
+        "tag": "BlitzMax",
+        "occurence": 2
+    },
+    {
+        "tag": "Sage",
+        "occurence": 3
+    },
+    {
+        "tag": "MQL4",
+        "occurence": 2
+    },
+    {
+        "tag": "MQL5",
+        "occurence": 2
+    },
+    {
+        "tag": "Kaitai Struct",
+        "occurence": 5
+    },
+    {
+        "tag": "BASIC",
+        "occurence": 1
+    },
+    {
+        "tag": "Rascal",
+        "occurence": 1
+    },
+    {
+        "tag": "ReScript",
+        "occurence": 5
+    },
+    {
+        "tag": "MLIR",
+        "occurence": 1
+    },
+    {
+        "tag": "Dhall",
+        "occurence": 2
+    },
+    {
+        "tag": "Turing",
+        "occurence": 3
+    },
+    {
+        "tag": "q",
+        "occurence": 1
+    },
+    {
+        "tag": "Slash",
+        "occurence": 2
+    },
+    {
+        "tag": "SystemVerilog",
+        "occurence": 5
+    },
+    {
+        "tag": "Terra",
+        "occurence": 5
+    },
+    {
+        "tag": "Faust",
+        "occurence": 1
+    },
+    {
+        "tag": "Bicep",
+        "occurence": 3
+    },
+    {
+        "tag": "Zig",
+        "occurence": 1
+    },
+    {
+        "tag": "Eiffel",
+        "occurence": 1
+    },
+    {
+        "tag": "YAML",
+        "occurence": 2
+    },
+    {
+        "tag": "PEG.js",
+        "occurence": 2
+    },
+    {
+        "tag": "PicoLisp",
+        "occurence": 1
+    },
+    {
+        "tag": "Liquid",
+        "occurence": 21
+    },
+    {
+        "tag": "Pure Data",
+        "occurence": 1
+    },
+    {
+        "tag": "Hy",
+        "occurence": 2
+    },
+    {
+        "tag": "Xojo",
+        "occurence": 3
+    },
+    {
+        "tag": "Cycript",
+        "occurence": 13
+    },
+    {
+        "tag": "Markdown",
+        "occurence": 1
+    },
+    {
+        "tag": "SaltStack",
+        "occurence": 1
+    },
+    {
+        "tag": "Brightscript",
+        "occurence": 1
+    },
+    {
+        "tag": "Vim Snippet",
+        "occurence": 2
+    },
+    {
+        "tag": "OpenSCAD",
+        "occurence": 1
+    },
+    {
+        "tag": "Modula-3",
+        "occurence": 1
+    },
+    {
+        "tag": "G-code",
+        "occurence": 1
+    },
+    {
+        "tag": "SMT",
+        "occurence": 1
+    },
+    {
+        "tag": "LiveScript",
+        "occurence": 2
+    },
+    {
+        "tag": "Apex",
+        "occurence": 1
+    },
+    {
+        "tag": "Cython",
+        "occurence": 2
+    },
+    {
+        "tag": "Red",
+        "occurence": 1
+    },
+    {
+        "tag": "IGOR Pro",
+        "occurence": 1
+    },
+    {
+        "tag": "ChucK",
+        "occurence": 1
+    },
+    {
+        "tag": "KRL",
+        "occurence": 1
+    },
+    {
+        "tag": "Pike",
+        "occurence": 1
+    },
+    {
+        "tag": "ObjectScript",
+        "occurence": 1
+    }
+]

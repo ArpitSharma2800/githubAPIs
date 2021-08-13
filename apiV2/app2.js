@@ -135,26 +135,42 @@ module.exports = {
   langDict: async () => {
     // const { filename, filetoname } = req.body;
     let dict = [];
+    extract = [
+      "./NewData/2016and.txt",
+      "./NewData/2017and.txt",
+      "./NewData/2018and.txt",
+      "./NewData/2019and.txt",
+      "./NewData/2020and.txt",
+      "./NewData/2016ios.txt",
+      "./NewData/2017ios.txt",
+      "./NewData/2018ios.txt",
+      "./NewData/2019ios.txt",
+      "./NewData/2020ios.txt",
+    ];
     try {
-      const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
-      JSON.parse(data).forEach((element) => {
-        // console.log(element.node.languages.edges)
-        repoTopics = element.node.languages.edges;
-        repoTopics.forEach((element2) => {
-          console.log(element2.node.name);
-          const found = dict.find((el) => el.tag === element2.node.name);
-          if (!found) {
-            dict.push({
-              tag: element2.node.name,
-              occurence: 1,
-            });
-          } else {
-            dict.find((v) => v.tag === found["tag"]).occurence =
-              found["occurence"] + 1;
-          }
+      extract.forEach((elem, i) => {
+        console.log(elem);
+        const data = fs.readFileSync(elem, "utf8");
+        JSON.parse(data).forEach((element) => {
+          // console.log(element.node.languages.edges)
+          repoTopics = element.node.languages.edges;
+          repoTopics.forEach((element2) => {
+            console.log(element2.node.name);
+            const found = dict.find((el) => el.tag === element2.node.name);
+            if (!found) {
+              dict.push({
+                tag: element2.node.name,
+                occurence: 1,
+              });
+            } else {
+              dict.find((v) => v.tag === found["tag"]).occurence =
+                found["occurence"] + 1;
+            }
+          });
         });
       });
-      append2json(dict, "2016-20Lang");
+      // append2json(dict, "201620Lang");
+      append2txt(dict, "201620LangText");
     } catch (err) {
       console.error(err);
     }
@@ -199,10 +215,10 @@ module.exports = {
     mainDict = [];
     const dict = JSON.parse(fs.readFileSync(`./dictionary/SODict.txt`, "utf8"));
     const dict2 = JSON.parse(
-      fs.readFileSync(`./dictionary/1620andiosLang.txt`, "utf8")
+      fs.readFileSync(`./newDictionary/201620LangText.txt`, "utf8")
     );
     const dict3 = JSON.parse(
-      fs.readFileSync(`./dictionary/1620andiosTopics.txt`, "utf8")
+      fs.readFileSync(`./newDictionary/201620TopicText.txt`, "utf8")
     );
     await dict.forEach((element) => {
       console.log(element.tag);
@@ -304,7 +320,7 @@ function append2txt(response, filetoname) {
   //     return callback(error);
   // });
   fs.appendFile(
-    `./dictionary/${filetoname}.txt`,
+    `./newDictionary/${filetoname}.txt`,
     JSON.stringify(response, null, 4),
     function (err) {
       if (err) throw err;
@@ -330,7 +346,7 @@ function append2jsonCSV(response, filetoname) {
   //     return callback(error);
   // });
   fs.appendFile(
-    `./description/${filetoname}.json`,
+    `./newDictionary/${filetoname}.json`,
     JSON.stringify(response, null, 4),
     function (err) {
       if (err) throw err;
