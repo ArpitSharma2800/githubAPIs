@@ -6,7 +6,8 @@ require("dotenv").config();
 module.exports = {
   serverCheck: (req, res) => {
     console.log("running");
-    const data = require("../NewData/2020ios.json");
+    // const data = require("../csvResults/extractedData2017and.json");
+    const data = require("../NewData/2017and.json");
     data.forEach((ele, i) => {
       console.log(i);
     });
@@ -175,17 +176,17 @@ module.exports = {
       console.error(err);
     }
   },
-
   description: () => {
     try {
-      const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
+      // const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
+      const data = require("../NewData/2017and.json");
       const dict = JSON.parse(
-        fs.readFileSync(`./dictionary/mainDictionaryText.txt`, "utf8")
+        fs.readFileSync(`./newDictionary/mainDictionaryText.txt`, "utf8")
       );
-      //JSON.stringify(dict, null, 4)
-      // console.log(dict[0]);
-      JSON.parse(data)
-        // .slice(0, 10)
+      JSON.stringify(dict, null, 4);
+      console.log(dict[0]);
+      data
+        // .slice(0, 2)
         .forEach((element) => {
           // console.log(element.node.description);
           repoDesc = element.node.description;
@@ -196,20 +197,21 @@ module.exports = {
               description: element.node.description,
               tag: receivedData,
             };
-            append2jsonCSV(responses, "extractedData");
+            append2jsonCSV(responses, "extractedData2017and");
             console.log(repoDesc, "\n\t " + receivedData);
           }
         });
+      console.log(repoDesc, "\n\t " + receivedData);
     } catch (err) {
       console.error(err);
     }
   },
   JSON2CSV: () => {
-    var data = require("../description/extractedData.json");
+    var data = require("../csvResults/extractedData2017and.json");
     // console.log(data);
     const JSONToCSV = require("json2csv").parse;
     var csv = JSONToCSV(data);
-    fs.writeFileSync("./description/data.csv", csv);
+    fs.writeFileSync("./csvResults/data2017and.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
@@ -346,7 +348,7 @@ function append2jsonCSV(response, filetoname) {
   //     return callback(error);
   // });
   fs.appendFile(
-    `./newDictionary/${filetoname}.json`,
+    `./csvResults/${filetoname}.json`,
     JSON.stringify(response, null, 4),
     function (err) {
       if (err) throw err;
