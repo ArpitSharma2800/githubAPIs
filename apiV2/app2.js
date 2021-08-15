@@ -6,8 +6,8 @@ require("dotenv").config();
 module.exports = {
   serverCheck: (req, res) => {
     console.log("running");
-    // const data = require("../csvResults/extractedData2017and.json");
-    const data = require("../NewData/2017and.json");
+    const data = require("../csvResults/extractedData2018and.json");
+    // const data = require("../NewData/2018and.json");
     data.forEach((ele, i) => {
       console.log(i);
     });
@@ -179,7 +179,7 @@ module.exports = {
   description: () => {
     try {
       // const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
-      const data = require("../NewData/2017and.json");
+      const data = require("../NewData/2018and.json");
       const dict = JSON.parse(
         fs.readFileSync(`./newDictionary/mainDictionaryText.txt`, "utf8")
       );
@@ -197,7 +197,7 @@ module.exports = {
               description: element.node.description,
               tag: receivedData,
             };
-            append2jsonCSV(responses, "extractedData2017and");
+            append2jsonCSV(responses, "extractedData2018and");
             console.log(repoDesc, "\n\t " + receivedData);
           }
         });
@@ -207,11 +207,11 @@ module.exports = {
     }
   },
   JSON2CSV: () => {
-    var data = require("../csvResults/extractedData2017and.json");
+    var data = require("../csvResults/extractedData2018and.json");
     // console.log(data);
     const JSONToCSV = require("json2csv").parse;
     var csv = JSONToCSV(data);
-    fs.writeFileSync("./csvResults/data2017and.csv", csv);
+    fs.writeFileSync("./csvResults/data2018and.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
