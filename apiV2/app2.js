@@ -179,12 +179,12 @@ module.exports = {
   description: () => {
     try {
       // const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
-      const data = require("../NewData/2018and.json");
+      const data = require("../NewData/2020ios.json");
       const dict = JSON.parse(
         fs.readFileSync(`./newDictionary/mainDictionaryText.txt`, "utf8")
       );
       JSON.stringify(dict, null, 4);
-      console.log(dict[0]);
+      // console.log(dict[0]);
       data
         // .slice(0, 2)
         .forEach((element) => {
@@ -197,7 +197,7 @@ module.exports = {
               description: element.node.description,
               tag: receivedData,
             };
-            append2jsonCSV(responses, "extractedData2018and");
+            append2jsonCSV(responses, "extractedData2020ios");
             console.log(repoDesc, "\n\t " + receivedData);
           }
         });
@@ -207,11 +207,11 @@ module.exports = {
     }
   },
   JSON2CSV: () => {
-    var data = require("../csvResults/extractedData2018and.json");
+    var data = require("../csvResults/extractedData2020ios.json");
     // console.log(data);
     const JSONToCSV = require("json2csv").parse;
     var csv = JSONToCSV(data);
-    fs.writeFileSync("./csvResults/data2018and.csv", csv);
+    fs.writeFileSync("./csvResults/data2020ios.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
