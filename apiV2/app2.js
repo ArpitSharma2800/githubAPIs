@@ -179,39 +179,55 @@ module.exports = {
   description: () => {
     try {
       // const data = fs.readFileSync(`./ExtractedData/1620andios.txt`, "utf8");
-      const data = require("../NewData/2020ios.json");
+      const data = require("../NewData/2016and.json");
       const dict = JSON.parse(
         fs.readFileSync(`./newDictionary/mainDictionaryText.txt`, "utf8")
       );
       JSON.stringify(dict, null, 4);
       // console.log(dict[0]);
-      data
-        // .slice(0, 2)
-        .forEach((element) => {
-          // console.log(element.node.description);
-          repoDesc = element.node.description;
-          if (repoDesc !== null) {
-            receivedData = getTagsInDescription(dict, repoDesc);
-            const responses = {
-              nameWithOwner: element.node.nameWithOwner,
-              description: element.node.description,
-              tag: receivedData,
-            };
-            append2jsonCSV(responses, "extractedData2020ios");
-            console.log(repoDesc, "\n\t " + receivedData);
-          }
+      data.slice(0, 100).forEach((element) => {
+        let languageCount = [];
+        let topicCount = [];
+        let mainCount = {};
+        let newadded = [];
+        // console.log(element.node.description);
+        repoDesc = element.node.description;
+        element.node.languages.edges.forEach((elemen, key) => {
+          languageCount.push(elemen.node.name);
+          mainCount[elemen.node.name] = true;
         });
+        element.node.repositoryTopics.edges.forEach((elemen, key) => {
+          topicCount.push(elemen.node.topic.name);
+          mainCount[elemen.node.topic.name] = true;
+        });
+        if (repoDesc !== null) {
+          receivedData = getTagsInDescription(dict, repoDesc, 10);
+          receivedData.forEach((ele2, key) => {
+            if (!(ele2 in mainCount)) newadded.push(ele2);
+          });
+          const responses = {
+            nameWithOwner: element.node.nameWithOwner,
+            description: element.node.description,
+            tag: receivedData,
+            newAdded: newadded,
+            languages: languageCount,
+            topics: topicCount,
+          };
+          append2jsonCSV(responses, "Data2016andNew");
+          console.log(repoDesc, "\n\t " + receivedData);
+        }
+      });
       console.log(repoDesc, "\n\t " + receivedData);
     } catch (err) {
       console.error(err);
     }
   },
   JSON2CSV: () => {
-    var data = require("../csvResults/extractedData2020ios.json");
+    var data = require("../csvResults/Data2016andNew.json");
     // console.log(data);
     const JSONToCSV = require("json2csv").parse;
     var csv = JSONToCSV(data);
-    fs.writeFileSync("./csvResults/data2020ios.csv", csv);
+    fs.writeFileSync("./csvResults/testing.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
@@ -269,10 +285,11 @@ module.exports = {
   },
 };
 
-var getTagsInDescription = function (dict, description) {
+var getTagsInDescription = function (dict, description, tagThreshold) {
   let res = [];
   for (var j = 0; j < dict.length; j++) {
     var _topic = dict[j].tag.toLowerCase();
+    if (dict[j].occurence < tagThreshold) continue;
     var splittedTag = _topic.split("-");
     var splittedDescription = description.toLowerCase().split(" ");
     if (
