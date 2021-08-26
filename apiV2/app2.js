@@ -286,11 +286,11 @@ module.exports = {
     }
   },
   JSON2CSV: () => {
-    var data = require("../csvResults/majorTest.json");
+    var data = require("../csvResults/random.json");
     // console.log(data);
     const JSONToCSV = require("json2csv").parse;
     var csv = JSONToCSV(data);
-    fs.writeFileSync("./csvResults/final.csv", csv);
+    fs.writeFileSync("./csvResults/random.csv", csv);
   },
   mergeFile: async () => {
     mainDict = [];
@@ -345,6 +345,16 @@ module.exports = {
     console.log("completed dict 3");
     await append2json(mainDict, "mainDictionary");
     await append2txt(mainDict, "mainDictionaryText");
+  },
+  accuracyCheck: async () => {
+    const num = 400;
+    const randomData = [];
+    const data = require("../csvResults/majorTest.json");
+    for (var i = 0; i < num; i++) {
+      const random = Math.floor(Math.random() * data.length);
+      randomData.push(data[random]);
+    }
+    append2jsonCSV(randomData, "random");
   },
 };
 
