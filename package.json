@@ -13,7 +13,8 @@
     "description": "node -e 'require(\"./apiV2/app2\").description()'",
     "merge": "node -e 'require(\"./apiV2/app2\").mergeFile()'",
     "jtc": "node -e 'require(\"./apiV2/app2\").JSON2CSV()'",
-    "mainMerge": "node -e 'require(\"./apiV2/app2\").concatJson()'"
+    "mainMerge": "node -e 'require(\"./apiV2/app2\").concatJson()'",
+    "jsonCountV3": "node -e 'require(\"./apiV3/appV3\").jsonArrayCount()'"
   },
   "author": "",
   "license": "MIT",
