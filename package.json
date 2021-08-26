@@ -14,7 +14,8 @@
     "merge": "node -e 'require(\"./apiV2/app2\").mergeFile()'",
     "jtc": "node -e 'require(\"./apiV2/app2\").JSON2CSV()'",
     "mainMerge": "node -e 'require(\"./apiV2/app2\").concatJson()'",
-    "jsonCountV3": "node -e 'require(\"./apiV3/appV3\").jsonArrayCount()'"
+    "jsonCountV3": "node -e 'require(\"./apiV3/appV3\").jsonArrayCount()'",
+    "jsonToCsvV3": "node -e 'require(\"./apiV3/appV3\").JSON2CSV()'"
   },
   "author": "",
   "license": "MIT",
