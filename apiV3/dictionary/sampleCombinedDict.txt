@@ -1,0 +1,14 @@
+[
+    {
+        "tag": "*",
+        "occurence": 841802
+    },
+    {
+        "tag": "apple-push-notifications",
+        "occurence": 4218
+    },
+    {
+        "tag": "watchos-2",
+        "occurence": 198
+    }
+]
