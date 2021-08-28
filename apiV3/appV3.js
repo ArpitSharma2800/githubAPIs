@@ -7,6 +7,7 @@ const {
 } = require("./service/saveFile");
 require("dotenv").config();
 const JSONToCSV = require("json2csv").parse;
+const { extractionApi } = require("./service/service");
 module.exports = {
   jsonArrayCount: () => {
     console.log("running");
@@ -15,16 +16,27 @@ module.exports = {
     data.forEach((ele, i) => {
       console.log(i);
     });
-    // const data = {
-    //   filetoname: "checking",
-    //   response: file,
-    // };
-    // append2JSON(data, (err, results) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    //   console.log(results);
-    // });
+  },
+  //extracting repository data
+  extraction: async () => {
+    let startDate = moment("01-01-2020", "DD-MM-YYYY");
+    let endDate = moment("31-12-2020", "DD-MM-YYYY");
+    // query like `android created:2020-01-01..2020-12-31 stars:>=3` can be converted in below format
+    // this can be edited according to need of the data required
+    const data = {
+      keyword: "ios",
+      stars: ">=3",
+      startDate: startDate,
+      endDate: endDate.format("YYYY-MM-DD"),
+      cursor: null,
+      first: 10,
+    };
+    extractionApi(data, (err, results) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(results);
+    });
   },
   //converting JSON into CSV
   JSON2CSV: () => {
