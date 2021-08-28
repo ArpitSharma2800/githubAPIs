@@ -1,10 +1,17 @@
 # Github Extraction tool V3.0
 
+## About Github GraphQL API
+
+### https://docs.github.com/en/graphql
+
+### https://docs.github.com/en/graphql/overview/about-the-graphql-api
+
 ## Scripts
 
 - jsonArrayCount : npm run jsonCountV3
 - jsonToCSV : npm run jsonToCsvV3
 - mergeDictionariers : npm run mergeDictV3
+- extract github data : npm run extractV3
 
 ### apiV3/SavedFiles
 
