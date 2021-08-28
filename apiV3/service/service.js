@@ -2,8 +2,9 @@ var axios = require("axios");
 const moment = require("moment");
 const { response } = require("express");
 const fs = require("fs");
-const { completedQuery } = require("../dbService/dbservice");
+// const { completedQuery } = require("../dbService/dbservice");
 const { queryCreated, queryCreatedCursor } = require("../graphQLQuery");
+const { append2JSON, append2Txt } = require("./saveFile");
 require("dotenv").config();
 
 module.exports = {
@@ -64,25 +65,38 @@ module.exports = {
           };
           await axios(config)
             .then(async function (response) {
+              console.log(response.data.data.search.edges);
               cursor = response.data.data.search.pageInfo.endCursor;
               hasNextpage = response.data.data.search.pageInfo.hasNextPage;
               limit = response.data.data.rateLimit.remaining;
               nodeCount = response.data.data.rateLimit.nodeCount;
               responses.push(JSON.stringify(response.data.data.search.edges));
-              append2json(response.data.data.search.edges, "2020ios");
-              append2txt(response.data.data.search.edges, "2020ios");
+              const saveData = {
+                filetoname: "sampleExtract",
+                response: response.data.data.search.edges,
+              };
+              await append2JSON(saveData, (err, results) => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(results);
+              });
+              await append2Txt(saveData, (err, results) => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(results);
+              });
             })
             .catch(function (err) {
               console.log(err);
               return callback(err);
             });
-          // }
         } catch (error) {
           console.log(error);
         }
         n = n + 1;
       }
-      // console.log("changing date");
       startDate = moment(startDate).add(1, "d");
     }
     promises = [];
@@ -93,7 +107,6 @@ module.exports = {
       hasNextpage,
       hasNextpage,
       limit,
-      queryGit,
     });
   },
 };

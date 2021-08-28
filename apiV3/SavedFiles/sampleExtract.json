@@ -1,0 +1,2927 @@
+[
+  {
+    "cursor": "Y3Vyc29yOjE=",
+    "node": {
+      "name": "pulse-sms-android",
+      "nameWithOwner": "jarvanh/pulse-sms-android",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzExNzc0OTA=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T05:04:57Z",
+      "databaseId": 231177490,
+      "description": "The ultimate SMS app for Android, available across all of your devices",
+      "diskUsage": 204066,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 95,
+      "hasIssuesEnabled": false,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": false,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 10
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          },
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 2
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 16,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/jarvanh/pulse-sms-android",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "pulse-sms-android",
+        "property": "name.camel"
+      },
+      {
+        "fragment": "The ultimate SMS app for Android, available across all of your devices",
+        "property": "description"
+      },
+      {
+        "fragment": "pulse-sms-android",
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjI=",
+    "node": {
+      "name": "octo4a",
+      "nameWithOwner": "feelfreelinux/octo4a",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDE1NjQ=",
+      "assignableUsers": {
+        "totalCount": 2
+      },
+      "createdAt": "2020-01-01T17:00:11Z",
+      "databaseId": 231241564,
+      "description": "Use your old Android device as an OctoPrint server.",
+      "diskUsage": 1126934,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 12,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 26
+      },
+      "labels": {
+        "totalCount": 10
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "C"
+            }
+          },
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Java"
+            }
+          },
+          {
+            "node": {
+              "name": "Makefile"
+            }
+          },
+          {
+            "node": {
+              "name": "C++"
+            }
+          },
+          {
+            "node": {
+              "name": "Shell"
+            }
+          },
+          {
+            "node": {
+              "name": "Go"
+            }
+          }
+        ],
+        "totalCount": 7
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "octoprint",
+                "stargazerCount": 7
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "3d-printing",
+                "stargazerCount": 64
+              }
+            }
+          }
+        ],
+        "totalCount": 3
+      },
+      "stargazerCount": 89,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/feelfreelinux/octo4a",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 5
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Use your old Android device as an OctoPrint server.",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjM=",
+    "node": {
+      "name": "android-samples",
+      "nameWithOwner": "ernestkamara/android-samples",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMjExNDc=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T13:40:27Z",
+      "databaseId": 231221147,
+      "description": "Android Samples",
+      "diskUsage": 141,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 4,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 10,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/ernestkamara/android-samples",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "android-samples",
+        "property": "name.camel"
+      },
+      {
+        "fragment": "Android Samples",
+        "property": "description"
+      },
+      {
+        "fragment": "android-samples",
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjQ=",
+    "node": {
+      "name": "AndroidJetpack",
+      "nameWithOwner": "zbyJade/AndroidJetpack",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzExNzc5MTY=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T05:11:33Z",
+      "databaseId": 231177916,
+      "description": null,
+      "diskUsage": 323,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 3,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 10,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/zbyJade/AndroidJetpack",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 2
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "AndroidJetpack",
+        "property": "name.camel"
+      },
+      {
+        "fragment": "AndroidJetpack",
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjU=",
+    "node": {
+      "name": "Funny-Crash",
+      "nameWithOwner": "minageorge5080/Funny-Crash",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMzY0MTQ=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T16:07:18Z",
+      "databaseId": 231236414,
+      "description": "Crash detector for android apps",
+      "diskUsage": 6223,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 4,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 2
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 14,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/minageorge5080/Funny-Crash",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 2
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Crash detector for android apps",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjY=",
+    "node": {
+      "name": "Wi-Fi_Info",
+      "nameWithOwner": "TrueMLGPro/Wi-Fi_Info",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzExNjU5Njk=",
+      "assignableUsers": {
+        "totalCount": 5
+      },
+      "createdAt": "2020-01-01T02:07:06Z",
+      "databaseId": 231165969,
+      "description": "Wi-Fi Info Android Project",
+      "diskUsage": 11724,
+      "environments": {
+        "edges": [
+          {
+            "node": {
+              "name": "github-pages"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "forkCount": 5,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 28
+      },
+      "labels": {
+        "totalCount": 10
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "wifi",
+                "stargazerCount": 69
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "wifi-network",
+                "stargazerCount": 11
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "app",
+                "stargazerCount": 245
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "java",
+                "stargazerCount": 95635
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "network",
+                "stargazerCount": 209
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "wifi-information",
+                "stargazerCount": 0
+              }
+            }
+          }
+        ],
+        "totalCount": 7
+      },
+      "stargazerCount": 12,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/TrueMLGPro/Wi-Fi_Info",
+      "usesCustomOpenGraphImage": true,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 5
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Wi-Fi Info Android Project",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjc=",
+    "node": {
+      "name": "audiovisualizer",
+      "nameWithOwner": "ImnIrdst/audiovisualizer",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMTM4MDM=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T12:29:06Z",
+      "databaseId": 231213803,
+      "description": "Another simple audio visualizer for android.",
+      "diskUsage": 7849,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 3,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 10
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "visualizer",
+                "stargazerCount": 10
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "audio-visualizer",
+                "stargazerCount": 26
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-visualizer",
+                "stargazerCount": 0
+              }
+            }
+          }
+        ],
+        "totalCount": 4
+      },
+      "stargazerCount": 23,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/ImnIrdst/audiovisualizer",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Another simple audio visualizer for android.",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjg=",
+    "node": {
+      "name": "Dark-Mode-Switch",
+      "nameWithOwner": "dadaewq/Dark-Mode-Switch",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMjcwNDA=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T14:36:26Z",
+      "databaseId": 231227040,
+      "description": "深色模式切换 Switch the Dark Mode of your Android devices(Supports Android 4.1+)",
+      "diskUsage": 933,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 3,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 1
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "darkmode",
+                "stargazerCount": 9
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "nightmode",
+                "stargazerCount": 3
+              }
+            }
+          }
+        ],
+        "totalCount": 3
+      },
+      "stargazerCount": 14,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/dadaewq/Dark-Mode-Switch",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "深色模式切换 Switch the Dark Mode of your Android devices(Supports Android 4.1+)",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjk=",
+    "node": {
+      "name": "appsflyer-oaid",
+      "nameWithOwner": "AppsFlyerSDK/appsflyer-oaid",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMDQ3NTU=",
+      "assignableUsers": {
+        "totalCount": 17
+      },
+      "createdAt": "2020-01-01T10:57:56Z",
+      "databaseId": 231204755,
+      "description": "AppsFlyer OAID collection",
+      "diskUsage": 3033,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 3,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": true,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 4
+      },
+      "labels": {
+        "totalCount": 13
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          },
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 2
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "appsflyer",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "huawei",
+                "stargazerCount": 17
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "msa",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "oaid",
+                "stargazerCount": 1
+              }
+            }
+          }
+        ],
+        "totalCount": 5
+      },
+      "stargazerCount": 17,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/AppsFlyerSDK/appsflyer-oaid",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 5
+      }
+    },
+    "textMatches": []
+  },
+  {
+    "cursor": "Y3Vyc29yOjEw",
+    "node": {
+      "name": "ScopedStorageDemo",
+      "nameWithOwner": "pg598595/ScopedStorageDemo",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMTE4MjE=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T12:09:57Z",
+      "databaseId": 231211821,
+      "description": null,
+      "diskUsage": 177,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 12,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "scoped",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "storage",
+                "stargazerCount": 41
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "androidq",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "scoped-storage",
+                "stargazerCount": 1
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-10",
+                "stargazerCount": 2
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-app-development",
+                "stargazerCount": 4
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-storage",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-storage-access",
+                "stargazerCount": 0
+              }
+            }
+          }
+        ],
+        "totalCount": 9
+      },
+      "stargazerCount": 35,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/pg598595/ScopedStorageDemo",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 4
+      }
+    },
+    "textMatches": []
+  },
+  {
+    "cursor": "Y3Vyc29yOjEx",
+    "node": {
+      "name": "NetDiagnose",
+      "nameWithOwner": "fengzhizi715/NetDiagnose",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMjYyNjQ=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T14:29:21Z",
+      "databaseId": 231226264,
+      "description": "Android 网络诊断工具，使用 Kotlin + LiveData + MVVM + Coroutines 开发",
+      "diskUsage": 458,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 3,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 2
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 17,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/fengzhizi715/NetDiagnose",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Android 网络诊断工具，使用 Kotlin + LiveData + MVVM + Coroutines 开发",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjEy",
+    "node": {
+      "name": "BlurShadowImageView",
+      "nameWithOwner": "virtualvivek/BlurShadowImageView",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDA5NzE=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T16:54:01Z",
+      "databaseId": 231240971,
+      "description": "A library for Android provides blurred drop shadows to ImageView similar to iOS image backdrop shadows.Provides fast canvas draw as no renderscript needed .The similar shadow blurred effects can also be seen in iOS Music App.",
+      "diskUsage": 38774,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 13,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": false,
+      "hasWikiEnabled": false,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 3
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "coloredshadow",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "imageview",
+                "stargazerCount": 3
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "java",
+                "stargazerCount": 95635
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "image",
+                "stargazerCount": 65
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-library",
+                "stargazerCount": 131
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android-ui",
+                "stargazerCount": 62
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ui",
+                "stargazerCount": 267
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "backdrop-shadows",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "shadow-blurred-effects",
+                "stargazerCount": 0
+              }
+            }
+          }
+        ],
+        "totalCount": 18
+      },
+      "stargazerCount": 125,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/virtualvivek/BlurShadowImageView",
+      "usesCustomOpenGraphImage": true,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 2
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "A library for Android provides blurred drop shadows to ImageView similar to iOS image backdrop shadows.Provides fast canvas draw as no renderscript needed .The similar shadow blurred effects can also be seen in iOS Music App.",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjEz",
+    "node": {
+      "name": "unpaprd",
+      "nameWithOwner": "gargakshit/unpaprd",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDU5NTc=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T17:43:54Z",
+      "databaseId": 231245957,
+      "description": "An audiobook 🎧 📔 app made using Flutter",
+      "diskUsage": 4943,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 15,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": true,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 7
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Ruby"
+            }
+          },
+          {
+            "node": {
+              "name": "Swift"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C"
+            }
+          },
+          {
+            "node": {
+              "name": "Dart"
+            }
+          },
+          {
+            "node": {
+              "name": "Shell"
+            }
+          }
+        ],
+        "totalCount": 6
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Dart"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "flutter",
+                "stargazerCount": 3203
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ios",
+                "stargazerCount": 23679
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "dart",
+                "stargazerCount": 1227
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "audiobooks",
+                "stargazerCount": 4
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "streaming",
+                "stargazerCount": 106
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "audioplayer",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ebook",
+                "stargazerCount": 31
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ebooks",
+                "stargazerCount": 12
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ebook-reader",
+                "stargazerCount": 21
+              }
+            }
+          }
+        ],
+        "totalCount": 14
+      },
+      "stargazerCount": 54,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/gargakshit/unpaprd",
+      "usesCustomOpenGraphImage": true,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 3
+      }
+    },
+    "textMatches": []
+  },
+  {
+    "cursor": "Y3Vyc29yOjE0",
+    "node": {
+      "name": "PRET-Android",
+      "nameWithOwner": "Jack-Rickwood/PRET-Android",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMDA5NjA=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T10:15:30Z",
+      "databaseId": 231200960,
+      "description": "An Android GUI for PRET - Printer Exploitation Toolkit (https://github.com/RUB-NDS/PRET)",
+      "diskUsage": 142,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 0,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Kotlin"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 3,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/Jack-Rickwood/PRET-Android",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "PRET-Android",
+        "property": "name.camel"
+      },
+      {
+        "fragment": "An Android GUI for PRET - Printer Exploitation Toolkit (https://github.com/RUB-NDS/PRET)",
+        "property": "description"
+      },
+      {
+        "fragment": "PRET-Android",
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjE1",
+    "node": {
+      "name": "flutter_android_activity_demo",
+      "nameWithOwner": "debugandroid/flutter_android_activity_demo",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzExOTkzNjQ=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T09:55:15Z",
+      "databaseId": 231199364,
+      "description": "Demostration of starting the android activity from flutter.",
+      "diskUsage": 56,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 0,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 1
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Shell"
+            }
+          },
+          {
+            "node": {
+              "name": "Swift"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C"
+            }
+          },
+          {
+            "node": {
+              "name": "Dart"
+            }
+          }
+        ],
+        "totalCount": 5
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Dart"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "flutter-examples",
+                "stargazerCount": 171
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "flutter-demo",
+                "stargazerCount": 75
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "flutter",
+                "stargazerCount": 3203
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "dart",
+                "stargazerCount": 1227
+              }
+            }
+          }
+        ],
+        "totalCount": 4
+      },
+      "stargazerCount": 3,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/debugandroid/flutter_android_activity_demo",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "flutter_android_activity_demo",
+        "property": "name.camel"
+      },
+      {
+        "fragment": "Demostration of starting the android activity from flutter.",
+        "property": "description"
+      },
+      {
+        "fragment": "flutter_android_activity_demo",
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjE2",
+    "node": {
+      "name": "CliniCare",
+      "nameWithOwner": "Syndicate555/CliniCare",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNTQ4MDc=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T19:24:29Z",
+      "databaseId": 231254807,
+      "description": "A mobile android application developed in Android  Studio as part of my semester long project for my software engineering class",
+      "diskUsage": 3952,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 1,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 5,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/Syndicate555/CliniCare",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "A mobile android application developed in Android  Studio as part of my semester long project for my software engineering class",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjE3",
+    "node": {
+      "name": "ElectroPARTYogram",
+      "nameWithOwner": "sevagh/ElectroPARTYogram",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDQzMjg=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T17:27:42Z",
+      "databaseId": 231244328,
+      "description": "native C++ Android beat visualizer with BTrack, Oboe, Ne10, SFML",
+      "diskUsage": 29217,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 0,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "CMake"
+            }
+          },
+          {
+            "node": {
+              "name": "C++"
+            }
+          },
+          {
+            "node": {
+              "name": "C"
+            }
+          },
+          {
+            "node": {
+              "name": "CSS"
+            }
+          },
+          {
+            "node": {
+              "name": "HTML"
+            }
+          },
+          {
+            "node": {
+              "name": "Makefile"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C++"
+            }
+          },
+          {
+            "node": {
+              "name": "Rich Text Format"
+            }
+          }
+        ],
+        "totalCount": 12
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "C++"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "neon",
+                "stargazerCount": 4
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "aarch64",
+                "stargazerCount": 7
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "beat-tracking",
+                "stargazerCount": 1
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "tempo-estimation",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "signal-processing",
+                "stargazerCount": 58
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "sfml",
+                "stargazerCount": 17
+              }
+            }
+          }
+        ],
+        "totalCount": 7
+      },
+      "stargazerCount": 3,
+      "submodules": {
+        "edges": [
+          {
+            "node": {
+              "name": "app/src/main/cpp/oboe"
+            }
+          },
+          {
+            "node": {
+              "name": "app/src/main/cpp/Ne10"
+            }
+          },
+          {
+            "node": {
+              "name": "app/src/main/cpp/gcem"
+            }
+          },
+          {
+            "node": {
+              "name": "app/src/main/cpp/freetype2"
+            }
+          },
+          {
+            "node": {
+              "name": "app/src/main/cpp/openal-soft"
+            }
+          }
+        ],
+        "totalCount": 5
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/sevagh/ElectroPARTYogram",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "native C++ Android beat visualizer with BTrack, Oboe, Ne10, SFML",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjE4",
+    "node": {
+      "name": "AssimpViewer",
+      "nameWithOwner": "tanpuer/AssimpViewer",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDExODc=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T16:56:16Z",
+      "databaseId": 231241187,
+      "description": "show 3D models with skeleton animations using Assimp",
+      "diskUsage": 4746,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 0,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "CMake"
+            }
+          },
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "C++"
+            }
+          },
+          {
+            "node": {
+              "name": "C"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C"
+            }
+          },
+          {
+            "node": {
+              "name": "GLSL"
+            }
+          }
+        ],
+        "totalCount": 6
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "C++"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "opengl-es",
+                "stargazerCount": 10
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "skeleton-animation",
+                "stargazerCount": 0
+              }
+            }
+          }
+        ],
+        "totalCount": 3
+      },
+      "stargazerCount": 3,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/tanpuer/AssimpViewer",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": []
+  },
+  {
+    "cursor": "Y3Vyc29yOjE5",
+    "node": {
+      "name": "InstaPic",
+      "nameWithOwner": "RegNex/InstaPic",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNjgyNzE=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T21:57:01Z",
+      "databaseId": 231268271,
+      "description": "InstaPic UI was designed by Mickael Guillaume and implemented with Flutter",
+      "diskUsage": 16283,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 2,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Kotlin"
+            }
+          },
+          {
+            "node": {
+              "name": "Swift"
+            }
+          },
+          {
+            "node": {
+              "name": "Objective-C"
+            }
+          },
+          {
+            "node": {
+              "name": "Dart"
+            }
+          },
+          {
+            "node": {
+              "name": "HTML"
+            }
+          }
+        ],
+        "totalCount": 5
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Dart"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "flutter",
+                "stargazerCount": 3203
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "android",
+                "stargazerCount": 78260
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ios",
+                "stargazerCount": 23679
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "dart",
+                "stargazerCount": 1227
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "apps",
+                "stargazerCount": 174
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ghana",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "ghanatechlab",
+                "stargazerCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "topic": {
+                "name": "dev",
+                "stargazerCount": 29
+              }
+            }
+          }
+        ],
+        "totalCount": 8
+      },
+      "stargazerCount": 5,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/RegNex/InstaPic",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": []
+  },
+  {
+    "cursor": "Y3Vyc29yOjIw",
+    "node": {
+      "name": "PrintDemo",
+      "nameWithOwner": "weioule/PrintDemo",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMjQyMzE=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T14:10:28Z",
+      "databaseId": 231224231,
+      "description": "Android蓝牙打印机 热敏打印机  打印小票，自适应格式排版、模板设置 美团外卖小票打印  和 新手指引蒙层提示demo",
+      "diskUsage": 11674,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 5,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 1
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [
+          {
+            "node": {
+              "name": "Java"
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": {
+        "name": "Java"
+      },
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 30,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/weioule/PrintDemo",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Android蓝牙打印机 热敏打印机  打印小票，自适应格式排版、模板设置 美团外卖小票打印  和 新手指引蒙层提示demo",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjIx",
+    "node": {
+      "name": "Termux-emu-VMOS",
+      "nameWithOwner": "GottModusTermux/Termux-emu-VMOS",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyNDkzMTM=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T18:21:13Z",
+      "databaseId": 231249313,
+      "description": "Mit VMOS eine android \"custom rom\" emulieren !! Auch ohne wirklichen root, könnt ihr mit VMOS umd der Rom, root emulieren.. nach ein paar updates haben es die entwickler geschafft.. darauf warte ich schon seit dem ich von dem VMOS projekt das erste mal mitbekommen hab ;)",
+      "diskUsage": 12,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 5,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": null,
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 8,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/GottModusTermux/Termux-emu-VMOS",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 6
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "Mit VMOS eine android \"custom rom\" emulieren !! Auch ohne wirklichen root, könnt ihr mit VMOS umd der Rom, root emulieren.. nach ein paar updates haben es die entwickler geschafft.. darauf warte ich schon seit dem ich von dem VMOS projekt das erste mal mitbekommen hab ;)",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjIy",
+    "node": {
+      "name": "StudentProject",
+      "nameWithOwner": "tomato-cc/StudentProject",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzEyMTQyMTA=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T12:33:00Z",
+      "databaseId": 231214210,
+      "description": "整合各类学生作业： 1）开发框架包含gui、swing，javaweb等   2）开发语言包含：java、python、ios、android等  3）包含各类作业案例： 学生管理系统、超市管理系统、医院挂号系统、餐饮系统、电影院管理系统、双色球购买系统、银行系统、成绩管理系统、新闻管理系统、图书管理系统、商城购物系统、飞机航班系统、售票系统、俄罗斯方块、QQ聊天等数百个真实案例",
+      "diskUsage": 18506,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 16,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": null,
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "stargazerCount": 40,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/tomato-cc/StudentProject",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 3
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "整合各类学生作业： 1）开发框架包含gui、swing，javaweb等   2）开发语言包含：java、python、ios、android等  3）包含各类作业案例： 学生管理系统、超市管理系统、医院挂号系统、餐饮系统、电影院管理系统、双色球购买系统、银行系统、成绩管理系统、新闻管理系统、图书管理系统、商城购物系统、飞机航班系统、售票系统、俄罗斯方块、QQ聊天等数百个真实案例",
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "cursor": "Y3Vyc29yOjIz",
+    "node": {
+      "name": "Cyber-Security-for-Mobile-Platforms",
+      "nameWithOwner": "ngoclesydney/Cyber-Security-for-Mobile-Platforms",
+      "id": "MDEwOlJlcG9zaXRvcnkyMzExODI2OTM=",
+      "assignableUsers": {
+        "totalCount": 1
+      },
+      "createdAt": "2020-01-01T06:22:31Z",
+      "databaseId": 231182693,
+      "description": "The subject provides an in-depth technical overview of mobile security architectures, new security risks and threats of modern mobile platforms and operating systems. Lab tutorials provide students with programming techniques (Android) in Cryptography, Network security, and Database security, and security tools in mobile penetration testing.",
+      "diskUsage": 4937,
+      "environments": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "forkCount": 0,
+      "hasIssuesEnabled": true,
+      "hasProjectsEnabled": true,
+      "hasWikiEnabled": true,
+      "isArchived": false,
+      "isBlankIssuesEnabled": true,
+      "isDisabled": false,
+      "isEmpty": false,
+      "isFork": false,
+      "isInOrganization": false,
+      "isLocked": false,
+      "isMirror": false,
+      "isPrivate": false,
+      "isSecurityPolicyEnabled": false,
+      "isTemplate": false,
+      "isUserConfigurationRepository": false,
+      "issues": {
+        "totalCount": 0
+      },
+      "labels": {
+        "totalCount": 9
+      },
+      "languages": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "lockReason": null,
+      "mergeCommitAllowed": true,
+      "mirrorUrl": null,
+      "primaryLanguage": null,
+      "projects": {
+        "totalCount": 0
+      },
+      "rebaseMergeAllowed": true,
+      "repositoryTopics": {
+        "edges": [
+          {
+            "node": {
+              "topic": {
+                "name": "mobile-security",
+                "stargazerCount": 20
+              }
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "stargazerCount": 5,
+      "submodules": {
+        "edges": [],
+        "totalCount": 0
+      },
+      "tempCloneToken": "",
+      "url": "https://github.com/ngoclesydney/Cyber-Security-for-Mobile-Platforms",
+      "usesCustomOpenGraphImage": false,
+      "viewerCanAdminister": false,
+      "viewerCanCreateProjects": false,
+      "viewerCanSubscribe": true,
+      "viewerCanUpdateTopics": false,
+      "viewerDefaultCommitEmail": null,
+      "viewerDefaultMergeMethod": "MERGE",
+      "viewerHasStarred": false,
+      "viewerPermission": "READ",
+      "viewerPossibleCommitEmails": [],
+      "viewerSubscription": "UNSUBSCRIBED",
+      "watchers": {
+        "totalCount": 1
+      }
+    },
+    "textMatches": [
+      {
+        "fragment": "The subject provides an in-depth technical overview of mobile security architectures, new security risks and threats of modern mobile platforms and operating systems. Lab tutorials provide students with programming techniques (Android) in Cryptography, Network security, and Database security, and security tools in mobile penetration testing.",
+        "property": "description"
+      }
+    ]
+  }
+]
