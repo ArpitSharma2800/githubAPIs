@@ -38,6 +38,51 @@ module.exports = {
       console.log(results);
     });
   },
+  //extracting all the languages inside extracted data, this can help creating major dictionary for creating tags for github similar to StackOverflow
+  langExtract: async () => {
+    let dict = [];
+    // If extractions are in multiple files, that files can be added to array and it will combine all the results inside single file
+    extract = ["./SavedFiles/sampleExtract.json"];
+    try {
+      extract.forEach((elem, i) => {
+        const data = require(elem);
+        data.forEach((element) => {
+          repoTopics = element.node.languages.edges;
+          repoTopics.forEach((element2) => {
+            console.log(element2.node.name);
+            const found = dict.find((el) => el.tag === element2.node.name); //check for existence
+            if (!found) {
+              dict.push({
+                tag: element2.node.name,
+                occurence: 1,
+              });
+            } else {
+              dict.find((v) => v.tag === found["tag"]).occurence =
+                found["occurence"] + 1;
+            }
+          });
+        });
+      });
+      const data = {
+        filetoname: "sampleLangDict",
+        response: dict,
+      };
+      await saveDictJSON(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
+      await saveDictTxt(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
   //converting JSON into CSV
   JSON2CSV: () => {
     var data = require("./sample/sampleCOunt.json");
