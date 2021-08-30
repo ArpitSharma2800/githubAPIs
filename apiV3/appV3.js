@@ -38,6 +38,55 @@ module.exports = {
       console.log(results);
     });
   },
+  //extracting all the topics inside extracted data, this can help creating major dictionary for creating tags for github similar to StackOverflow
+  topicsExtract: async () => {
+    let dict = [];
+    // If extractions are in multiple files, that files can be added to array and it will combine all the results inside single file
+    extract = ["./SavedFiles/sampleExtract.json"];
+    try {
+      extract.forEach((elem, i) => {
+        const data = require(elem);
+        data.forEach((element) => {
+          // console.log(element.node.repositoryTopics.edges);
+          repoTopics = element.node.repositoryTopics.edges;
+          repoTopics.forEach((element2) => {
+            console.log(element2.node.topic.name);
+            const found = dict.find(
+              //check for existence
+              (el) => el.tag === element2.node.topic.name
+            );
+            if (!found) {
+              dict.push({
+                tag: element2.node.topic.name,
+                occurence: 1,
+              });
+            } else {
+              dict.find((v) => v.tag === found["tag"]).occurence =
+                found["occurence"] + 1;
+            }
+          });
+        });
+      });
+      const data = {
+        filetoname: "sampleTopicDict",
+        response: dict,
+      };
+      await saveDictJSON(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
+      await saveDictTxt(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
   //extracting all the languages inside extracted data, this can help creating major dictionary for creating tags for github similar to StackOverflow
   langExtract: async () => {
     let dict = [];
@@ -94,7 +143,10 @@ module.exports = {
   mergeDict: async () => {
     let i = 0;
     let mainDict = [];
-    const files = ["./sample/sampleDict1.json", "./sample/sampleDict2.json"];
+    const files = [
+      "./dictionary/sampleLangDict.json",
+      "./dictionary/sampleTopicDict.json",
+    ];
     try {
       while (i < files.length) {
         const dict = require(files[i]);

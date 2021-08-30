@@ -1,14 +1,294 @@
 [
     {
-        "tag": "*",
-        "occurence": 841802
+        "tag": "java",
+        "occurence": 13
     },
     {
-        "tag": "apple-push-notifications",
-        "occurence": 4218
+        "tag": "kotlin",
+        "occurence": 14
     },
     {
-        "tag": "watchos-2",
-        "occurence": 198
+        "tag": "c",
+        "occurence": 3
+    },
+    {
+        "tag": "makefile",
+        "occurence": 2
+    },
+    {
+        "tag": "c++",
+        "occurence": 3
+    },
+    {
+        "tag": "shell",
+        "occurence": 3
+    },
+    {
+        "tag": "go",
+        "occurence": 1
+    },
+    {
+        "tag": "ruby",
+        "occurence": 1
+    },
+    {
+        "tag": "swift",
+        "occurence": 3
+    },
+    {
+        "tag": "objective-c",
+        "occurence": 5
+    },
+    {
+        "tag": "dart",
+        "occurence": 6
+    },
+    {
+        "tag": "cmake",
+        "occurence": 2
+    },
+    {
+        "tag": "css",
+        "occurence": 1
+    },
+    {
+        "tag": "html",
+        "occurence": 2
+    },
+    {
+        "tag": "objective-c++",
+        "occurence": 1
+    },
+    {
+        "tag": "rich text format",
+        "occurence": 1
+    },
+    {
+        "tag": "glsl",
+        "occurence": 1
+    },
+    {
+        "tag": "octoprint",
+        "occurence": 1
+    },
+    {
+        "tag": "android",
+        "occurence": 11
+    },
+    {
+        "tag": "3d-printing",
+        "occurence": 1
+    },
+    {
+        "tag": "wifi",
+        "occurence": 1
+    },
+    {
+        "tag": "wifi-network",
+        "occurence": 1
+    },
+    {
+        "tag": "app",
+        "occurence": 1
+    },
+    {
+        "tag": "network",
+        "occurence": 1
+    },
+    {
+        "tag": "wifi-information",
+        "occurence": 1
+    },
+    {
+        "tag": "visualizer",
+        "occurence": 1
+    },
+    {
+        "tag": "audio-visualizer",
+        "occurence": 1
+    },
+    {
+        "tag": "android-visualizer",
+        "occurence": 1
+    },
+    {
+        "tag": "darkmode",
+        "occurence": 1
+    },
+    {
+        "tag": "nightmode",
+        "occurence": 1
+    },
+    {
+        "tag": "appsflyer",
+        "occurence": 1
+    },
+    {
+        "tag": "huawei",
+        "occurence": 1
+    },
+    {
+        "tag": "msa",
+        "occurence": 1
+    },
+    {
+        "tag": "oaid",
+        "occurence": 1
+    },
+    {
+        "tag": "scoped",
+        "occurence": 1
+    },
+    {
+        "tag": "storage",
+        "occurence": 1
+    },
+    {
+        "tag": "androidq",
+        "occurence": 1
+    },
+    {
+        "tag": "scoped-storage",
+        "occurence": 1
+    },
+    {
+        "tag": "android-10",
+        "occurence": 1
+    },
+    {
+        "tag": "android-app-development",
+        "occurence": 1
+    },
+    {
+        "tag": "android-storage",
+        "occurence": 1
+    },
+    {
+        "tag": "android-storage-access",
+        "occurence": 1
+    },
+    {
+        "tag": "coloredshadow",
+        "occurence": 1
+    },
+    {
+        "tag": "imageview",
+        "occurence": 1
+    },
+    {
+        "tag": "image",
+        "occurence": 1
+    },
+    {
+        "tag": "android-library",
+        "occurence": 1
+    },
+    {
+        "tag": "android-ui",
+        "occurence": 1
+    },
+    {
+        "tag": "ui",
+        "occurence": 1
+    },
+    {
+        "tag": "backdrop-shadows",
+        "occurence": 1
+    },
+    {
+        "tag": "shadow-blurred-effects",
+        "occurence": 1
+    },
+    {
+        "tag": "flutter",
+        "occurence": 3
+    },
+    {
+        "tag": "ios",
+        "occurence": 2
+    },
+    {
+        "tag": "audiobooks",
+        "occurence": 1
+    },
+    {
+        "tag": "streaming",
+        "occurence": 1
+    },
+    {
+        "tag": "audioplayer",
+        "occurence": 1
+    },
+    {
+        "tag": "ebook",
+        "occurence": 1
+    },
+    {
+        "tag": "ebooks",
+        "occurence": 1
+    },
+    {
+        "tag": "ebook-reader",
+        "occurence": 1
+    },
+    {
+        "tag": "flutter-examples",
+        "occurence": 1
+    },
+    {
+        "tag": "flutter-demo",
+        "occurence": 1
+    },
+    {
+        "tag": "neon",
+        "occurence": 1
+    },
+    {
+        "tag": "aarch64",
+        "occurence": 1
+    },
+    {
+        "tag": "beat-tracking",
+        "occurence": 1
+    },
+    {
+        "tag": "tempo-estimation",
+        "occurence": 1
+    },
+    {
+        "tag": "signal-processing",
+        "occurence": 1
+    },
+    {
+        "tag": "sfml",
+        "occurence": 1
+    },
+    {
+        "tag": "opengl-es",
+        "occurence": 1
+    },
+    {
+        "tag": "skeleton-animation",
+        "occurence": 1
+    },
+    {
+        "tag": "apps",
+        "occurence": 1
+    },
+    {
+        "tag": "ghana",
+        "occurence": 1
+    },
+    {
+        "tag": "ghanatechlab",
+        "occurence": 1
+    },
+    {
+        "tag": "dev",
+        "occurence": 1
+    },
+    {
+        "tag": "mobile-security",
+        "occurence": 1
     }
 ]

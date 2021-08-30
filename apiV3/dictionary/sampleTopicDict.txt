@@ -1,73 +1,5 @@
 [
     {
-        "tag": "java",
-        "occurence": 13
-    },
-    {
-        "tag": "kotlin",
-        "occurence": 14
-    },
-    {
-        "tag": "c",
-        "occurence": 3
-    },
-    {
-        "tag": "makefile",
-        "occurence": 2
-    },
-    {
-        "tag": "c++",
-        "occurence": 3
-    },
-    {
-        "tag": "shell",
-        "occurence": 3
-    },
-    {
-        "tag": "go",
-        "occurence": 1
-    },
-    {
-        "tag": "ruby",
-        "occurence": 1
-    },
-    {
-        "tag": "swift",
-        "occurence": 3
-    },
-    {
-        "tag": "objective-c",
-        "occurence": 5
-    },
-    {
-        "tag": "dart",
-        "occurence": 6
-    },
-    {
-        "tag": "cmake",
-        "occurence": 2
-    },
-    {
-        "tag": "css",
-        "occurence": 1
-    },
-    {
-        "tag": "html",
-        "occurence": 2
-    },
-    {
-        "tag": "objective-c++",
-        "occurence": 1
-    },
-    {
-        "tag": "rich text format",
-        "occurence": 1
-    },
-    {
-        "tag": "glsl",
-        "occurence": 1
-    },
-    {
         "tag": "octoprint",
         "occurence": 1
     },
@@ -90,6 +22,10 @@
     {
         "tag": "app",
         "occurence": 1
+    },
+    {
+        "tag": "java",
+        "occurence": 2
     },
     {
         "tag": "network",
@@ -206,6 +142,10 @@
     {
         "tag": "ios",
         "occurence": 2
+    },
+    {
+        "tag": "dart",
+        "occurence": 3
     },
     {
         "tag": "audiobooks",

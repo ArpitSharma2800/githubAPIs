@@ -19,7 +19,8 @@
     "jsonToCsvV3": "node -e 'require(\"./apiV3/appV3\").JSON2CSV()'",
     "mergeDictV3": "node -e 'require(\"./apiV3/appV3\").mergeDict()'",
     "extractV3": "node -e 'require(\"./apiV3/appV3\").extraction()'",
-    "langV3": "node -e 'require(\"./apiV3/appV3\").langExtract()'"
+    "langV3": "node -e 'require(\"./apiV3/appV3\").langExtract()'",
+    "topicsV3": "node -e 'require(\"./apiV3/appV3\").topicsExtract()'"
   },
   "author": "",
   "license": "MIT",
