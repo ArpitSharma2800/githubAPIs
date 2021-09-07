@@ -17,6 +17,8 @@
 
 ## Flow for extracting and generating tags from extracted data
 
+**Before starting make sure to run npm install**
+
 1. Go to https://docs.github.com/en/graphql/overview/explorer and generate GraphQL query for which data has to be extracted (There is advanced version of github GraphQL already present inside GraphQlQuery.js)
 2. Generate as many Github token you can, these token are necessary for extracting data through GitHib GraphQL APIs (https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 3. Paste Github token inside extractionApi function in https://github.com/ArpitSharma2800/githubAPIs/blob/master/apiV3/service/service.js

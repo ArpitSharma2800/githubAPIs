@@ -132,6 +132,70 @@ module.exports = {
       console.error(err);
     }
   },
+  //extracting tags through description from extracted Github data
+  description: () => {
+    // Replace these file names with extracted data files
+    const files = [
+      "../NewData/2016and.json",
+      "../NewData/2017and.json",
+      "../NewData/2018and.json",
+      "../NewData/2019and.json",
+      "../NewData/2020and.json",
+      "../NewData/2016ios.json",
+      "../NewData/2017ios.json",
+      "../NewData/2018ios.json",
+      "../NewData/2019ios.json",
+      "../NewData/2020ios.json",
+    ];
+    var i = 0;
+    while (i < files.length) {
+      try {
+        const data = require(files[i]);
+        // for extracting tags using decription it need a dictionary, the dictionary can be extracted using topics and languages extraction functions
+        const dict = JSON.parse(
+          fs.readFileSync(`./dictionary/sampleMainDictTxt.txt`, "utf8") //sample dictionary (this dictionary can be used for android and iOS)
+        );
+        // JSON.stringify(dict, null, 4);
+        // console.log(dict[0]);
+        data.forEach((element) => {
+          let languageCount = [];
+          let topicCount = [];
+          let mainCount = {};
+          let newadded = [];
+          // console.log(element.node.description);
+          repoDesc = element.node.description;
+          element.node.languages.edges.forEach((elemen, key) => {
+            languageCount.push(elemen.node.name);
+            mainCount[elemen.node.name] = true;
+          });
+          element.node.repositoryTopics.edges.forEach((elemen, key) => {
+            topicCount.push(elemen.node.topic.name);
+            mainCount[elemen.node.topic.name] = true;
+          });
+          if (repoDesc !== null) {
+            receivedData = getTagsInDescription(dict, repoDesc, 10);
+            receivedData.forEach((ele2, key) => {
+              if (!(ele2 in mainCount)) newadded.push(ele2);
+            });
+            const responses = {
+              nameWithOwner: element.node.nameWithOwner,
+              description: element.node.description,
+              tag: receivedData,
+              newAdded: newadded,
+              languages: languageCount,
+              topics: topicCount,
+            };
+            append2jsonCSV(responses, "majorTest");
+            console.log(repoDesc, "\n\t " + receivedData);
+          }
+        });
+        console.log(repoDesc, "\n\t " + receivedData);
+      } catch (err) {
+        console.error(err);
+      }
+      i = i + 1;
+    }
+  },
   //converting JSON into CSV
   JSON2CSV: () => {
     var data = require("./sample/sampleCOunt.json");
