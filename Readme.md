@@ -18,7 +18,10 @@
 ## Flow for extracting and generating tags from extracted data
 
 1. Go to https://docs.github.com/en/graphql/overview/explorer and generate GraphQL query for which data has to be extracted (There is advanced version of github GraphQL already present inside GraphQlQuery.js)
-2. Generate Github token, these token are necessary for getting data through GitHib GraphQL APIs
+2. Generate as many Github token you can, these token are necessary for extracting data through GitHib GraphQL APIs (https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+3. Paste Github token inside extractionApi function in https://github.com/ArpitSharma2800/githubAPIs/blob/master/apiV3/service/service.js
+4. Inside extraction function in https://github.com/ArpitSharma2800/githubAPIs/blob/master/apiV3/appV3.js replace keyword, number of stars, extraction start and end date, (This function will take time to extract data and it will save extracted file inside https://github.com/ArpitSharma2800/githubAPIs/tree/master/apiV3/SavedFiles)
+5. Open extracted file, **CTRL + H** and replace "**][**" with "**,**" this is because extraction concat/append to the existing file.
 
 ### apiV3/SavedFiles
 

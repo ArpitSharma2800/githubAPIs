@@ -53,7 +53,8 @@ module.exports = {
             process.env.GITHUB_TOKEN4,
             process.env.GITHUB_TOKEN5,
           ];
-          const random = Math.floor(Math.random() * token.length);
+          // var token = [];
+          const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit
           var config = {
             method: "post",
             url: "https://api.github.com/graphql",

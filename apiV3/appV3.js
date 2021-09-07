@@ -29,7 +29,7 @@ module.exports = {
       startDate: startDate,
       endDate: endDate.format("YYYY-MM-DD"),
       cursor: null,
-      first: 10,
+      first: 10, //number of data in single API Call, can be increased just be careful about Github limit.
     };
     extractionApi(data, (err, results) => {
       if (err) {
