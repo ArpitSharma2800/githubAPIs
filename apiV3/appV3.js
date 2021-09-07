@@ -4,6 +4,8 @@ const {
   append2JSON,
   saveDictJSON,
   saveDictTxt,
+  decriptJSON,
+  decriptTxt,
 } = require("./service/saveFile");
 require("dotenv").config();
 const JSONToCSV = require("json2csv").parse;
@@ -133,20 +135,9 @@ module.exports = {
     }
   },
   //extracting tags through description from extracted Github data
-  description: () => {
+  description: async () => {
     // Replace these file names with extracted data files
-    const files = [
-      "../NewData/2016and.json",
-      "../NewData/2017and.json",
-      "../NewData/2018and.json",
-      "../NewData/2019and.json",
-      "../NewData/2020and.json",
-      "../NewData/2016ios.json",
-      "../NewData/2017ios.json",
-      "../NewData/2018ios.json",
-      "../NewData/2019ios.json",
-      "../NewData/2020ios.json",
-    ];
+    const files = ["./SavedFiles/sampleExtract.json"];
     var i = 0;
     while (i < files.length) {
       try {
@@ -157,14 +148,14 @@ module.exports = {
         );
         // JSON.stringify(dict, null, 4);
         // console.log(dict[0]);
-        data.forEach((element) => {
+        data.forEach(async (element) => {
           let languageCount = [];
           let topicCount = [];
           let mainCount = {};
           let newadded = [];
           // console.log(element.node.description);
           repoDesc = element.node.description;
-          element.node.languages.edges.forEach((elemen, key) => {
+          element.node.languages.edges.forEach(async (elemen, key) => {
             languageCount.push(elemen.node.name);
             mainCount[elemen.node.name] = true;
           });
@@ -185,7 +176,23 @@ module.exports = {
               languages: languageCount,
               topics: topicCount,
             };
-            append2jsonCSV(responses, "majorTest");
+            // append2jsonCSV(responses, "majorTest");
+            const data = {
+              filetoname: "sampleDecription",
+              response: responses,
+            };
+            await decriptJSON(data, (err, results) => {
+              if (err) {
+                console.log(err);
+              }
+              console.log(results);
+            });
+            await decriptTxt(data, (err, results) => {
+              if (err) {
+                console.log(err);
+              }
+              console.log(results);
+            });
             console.log(repoDesc, "\n\t " + receivedData);
           }
         });
@@ -251,4 +258,45 @@ module.exports = {
       console.log(results);
     });
   },
+};
+
+var getTagsInDescription = function (dict, description, tagThreshold) {
+  let res = [];
+  for (var j = 0; j < dict.length; j++) {
+    var _topic = dict[j].tag.toLowerCase();
+    if (dict[j].occurence < tagThreshold) continue;
+    var splittedTag = _topic.split("-");
+    var splittedDescription = description.toLowerCase().split(" ");
+    if (
+      arrayWithinArray(splittedTag, splittedDescription) ||
+      arrayIncludes(splittedDescription, _topic)
+    )
+      res.push(_topic);
+  }
+  return res;
+};
+
+var arrayIncludes = function (arr2, topic) {
+  var res = false;
+  if (arr2.length == 0) return false;
+  for (var j = 0; j < arr2.length; j++) {
+    if (arr2[j] == topic) {
+      return true;
+    }
+  }
+  return false;
+};
+
+var arrayWithinArray = function (arr1, arr2) {
+  var res = false;
+  if (arr1.length == 0) return false;
+  for (var j = 0; j < arr2.length; j++) {
+    if (arr2[j] == arr1[0]) {
+      var matched = 1;
+      for (var i = 1; i < arr1.length && j + i < arr2.length; i++)
+        if (arr1[i] == arr2[j + i]) matched++;
+      if (matched == arr1.length) return true;
+    }
+  }
+  return false;
 };

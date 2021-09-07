@@ -20,7 +20,8 @@
     "mergeDictV3": "node -e 'require(\"./apiV3/appV3\").mergeDict()'",
     "extractV3": "node -e 'require(\"./apiV3/appV3\").extraction()'",
     "langV3": "node -e 'require(\"./apiV3/appV3\").langExtract()'",
-    "topicsV3": "node -e 'require(\"./apiV3/appV3\").topicsExtract()'"
+    "topicsV3": "node -e 'require(\"./apiV3/appV3\").topicsExtract()'",
+    "descriptionV3": "node -e 'require(\"./apiV3/appV3\").description()'"
   },
   "author": "",
   "license": "MIT",
