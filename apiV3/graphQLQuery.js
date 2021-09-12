@@ -253,8 +253,17 @@ function queryCreatedCursor(queryGit, first, cursor) {
         }
         `;
 }
+function queryRepoCount(queryGit) {
+  return `{
+          search(query:"${queryGit}", type: REPOSITORY) {
+            repositoryCount
+          }
+        }
+        `;
+}
 
 module.exports = {
   queryCreated,
   queryCreatedCursor,
+  queryRepoCount,
 };

@@ -1,5 +1,7 @@
 const fs = require("fs");
+const configV3 = require("./config.json");
 const moment = require("moment");
+var axios = require("axios");
 const {
   append2JSON,
   saveDictJSON,
@@ -10,6 +12,7 @@ const {
 require("dotenv").config();
 const JSONToCSV = require("json2csv").parse;
 const { extractionApi } = require("./service/service");
+const { queryRepoCount } = require("./graphQLQuery");
 module.exports = {
   jsonArrayCount: () => {
     console.log("running");
@@ -21,24 +24,58 @@ module.exports = {
   },
   //extracting repository data
   extraction: async () => {
-    let startDate = moment("01-01-2020", "DD-MM-YYYY");
-    let endDate = moment("01-01-2020", "DD-MM-YYYY");
+    // console.log(config);
+    var repoCount = 0;
+    let startDate = moment(configV3.extraction.startDate, "DD-MM-YYYY");
+    let endDate = moment(configV3.extraction.endDate, "DD-MM-YYYY");
     // query like `android created:2020-01-01..2020-12-31 stars:>=3` can be converted in below format
     // this can be edited according to need of the data required
     const data = {
-      keyword: "android",
-      stars: ">=3",
+      query: configV3.extraction.query,
       startDate: startDate,
       endDate: endDate.format("YYYY-MM-DD"),
       cursor: null,
       first: 10, //number of data in single API Call, can be increased just be careful about Github limit.
     };
-    extractionApi(data, (err, results) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(results);
+    var dataApi = JSON.stringify({
+      query: queryRepoCount(
+        data.query +
+          ` ${configV3.extraction.type}:` +
+          startDate.format("YYYY-MM-DD") +
+          ".." +
+          endDate.format("YYYY-MM-DD")
+      ),
+      variables: {},
     });
+    var config = {
+      method: "post",
+      url: "https://api.github.com/graphql",
+      headers: {
+        // Authorization: `Bearer ${configV3.extraction.githubTokens[0]}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      data: dataApi,
+    };
+    await axios(config)
+      .then(async function (response) {
+        console.log(response.data.data.search.repositoryCount);
+        repoCount = response.data.data.search.repositoryCount;
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+
+    if (repoCount > 1000) {
+      extractionApi(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
+    } else {
+      console.log("data less than 1000");
+    }
   },
   //extracting all the topics inside extracted data, this can help creating major dictionary for creating tags for github similar to StackOverflow
   topicsExtract: async () => {

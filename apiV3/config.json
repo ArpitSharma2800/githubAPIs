@@ -1,0 +1,10 @@
+{
+  "extraction": {
+    "githubTokens": ["GITHUB_TOKEN1", "GITHUB_TOKEN2"],
+    "query": "android stars:>=3",
+    "type": "created",
+    "startDate": "01-01-2020",
+    "endDate": "01-02-2020",
+    "fileName": "sampleExt"
+  }
+}

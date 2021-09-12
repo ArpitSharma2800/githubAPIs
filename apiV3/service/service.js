@@ -1,6 +1,7 @@
 var axios = require("axios");
+const configV3 = require("../config.json");
 const moment = require("moment");
-const { response } = require("express");
+const { response, query } = require("express");
 const fs = require("fs");
 // const { completedQuery } = require("../dbService/dbservice");
 const { queryCreated, queryCreatedCursor } = require("../graphQLQuery");
@@ -11,10 +12,9 @@ module.exports = {
   extractionApi: async (data, callback) => {
     let first = data.first; //number of repository data should be in single call. Make sure not to exceed nodes limit in GithubExplorer!
     var cursor = data.cursor; // cursor is default null and updates automatically.
-    var keyword = data.keyword;
-    var stars = data.stars; // minimum number of stars
     var startDate = data.startDate;
     var endDate = data.endDate;
+    var queryData = data.query;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -28,11 +28,9 @@ module.exports = {
       cursor = null;
       while (hasNextpage == true) {
         let updateQuery =
-          keyword +
-          " created:" +
-          startDate.format("YYYY-MM-DD") +
-          " stars:" +
-          stars;
+          queryData +
+          ` ${configV3.extraction.type}:` +
+          startDate.format("YYYY-MM-DD");
         console.log(updateQuery);
         try {
           console.log(n);
@@ -53,7 +51,7 @@ module.exports = {
             process.env.GITHUB_TOKEN4,
             process.env.GITHUB_TOKEN5,
           ];
-          // var token = [];
+          // var token = configV3.extraction.githubTokens;
           const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit
           var config = {
             method: "post",
@@ -73,7 +71,7 @@ module.exports = {
               nodeCount = response.data.data.rateLimit.nodeCount;
               responses.push(JSON.stringify(response.data.data.search.edges));
               const saveData = {
-                filetoname: "sampleExtract",
+                filetoname: configV3.extraction.fileName,
                 response: response.data.data.search.edges,
               };
               await append2JSON(saveData, (err, results) => {
