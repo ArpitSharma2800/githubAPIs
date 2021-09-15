@@ -11,7 +11,7 @@ const {
 } = require("./service/saveFile");
 require("dotenv").config();
 const JSONToCSV = require("json2csv").parse;
-const { extractionApi } = require("./service/service");
+const { extractionApi, extractionApiSingle } = require("./service/service");
 const { queryRepoCount } = require("./graphQLQuery");
 module.exports = {
   jsonArrayCount: () => {
@@ -75,6 +75,12 @@ module.exports = {
       });
     } else {
       console.log("data less than 1000");
+      extractionApiSingle(data, (err, results) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(results);
+      });
     }
   },
   //extracting all the topics inside extracted data, this can help creating major dictionary for creating tags for github similar to StackOverflow
