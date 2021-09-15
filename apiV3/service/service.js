@@ -25,12 +25,12 @@ module.exports = {
       ` ${configV3.extraction.type}:` +
       startDate.format("YYYY-MM-DD") +
       ".." +
-      endDate.format("YYYY-MM-DD");
+      endDate;
     console.log(updateQuery);
     while (hasNextpage == true) {
       try {
         console.log(n);
-        if (responses.length == 10) {
+        if (responses.length == 50) {
           console.log("running");
           try {
             const saveData = {
@@ -68,10 +68,10 @@ module.exports = {
           });
           var token = [
             process.env.GITHUB_TOKEN,
-            process.env.GITHUB_TOKEN2,
-            process.env.GITHUB_TOKEN3,
-            process.env.GITHUB_TOKEN4,
-            process.env.GITHUB_TOKEN5,
+            // process.env.GITHUB_TOKEN2,
+            // process.env.GITHUB_TOKEN3,
+            // process.env.GITHUB_TOKEN4,
+            // process.env.GITHUB_TOKEN5,
           ];
           // var token = configV3.extraction.githubTokens;
           const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit
@@ -127,7 +127,6 @@ module.exports = {
       hasNextpage,
       hasNextpage,
       limit,
-      queryGit,
     });
   },
   // extraction based on the dates.
@@ -168,10 +167,10 @@ module.exports = {
           //extraction github tokens
           var token = [
             process.env.GITHUB_TOKEN,
-            process.env.GITHUB_TOKEN2,
-            process.env.GITHUB_TOKEN3,
-            process.env.GITHUB_TOKEN4,
-            process.env.GITHUB_TOKEN5,
+            // process.env.GITHUB_TOKEN2,
+            // process.env.GITHUB_TOKEN3,
+            // process.env.GITHUB_TOKEN4,
+            // process.env.GITHUB_TOKEN5,
           ];
           // var token = configV3.extraction.githubTokens;
           const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit

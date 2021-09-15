@@ -16,7 +16,7 @@ const { queryRepoCount } = require("./graphQLQuery");
 module.exports = {
   jsonArrayCount: () => {
     console.log("running");
-    const file = require("./sample/sampleCOunt.json"); //give path to file location.
+    const file = require("./SavedFiles/sampleExtSingle.json"); //give path to file location.
     const data = file;
     data.forEach((ele, i) => {
       console.log(i);
