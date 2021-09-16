@@ -30,12 +30,70 @@ module.exports = {
     while (hasNextpage == true) {
       try {
         console.log(n);
-        if (responses.length == 50) {
-          console.log("running");
-          try {
+        // if (responses.length == 50) {
+        //   console.log("running");
+        //   try {
+        //     const saveData = {
+        //       filetoname: configV3.extraction.fileName,
+        //       response: responses,
+        //     };
+        //     await append2JSON(saveData, (err, results) => {
+        //       if (err) {
+        //         console.log(err);
+        //       }
+        //       console.log(results);
+        //     });
+        //     await append2Txt(saveData, (err, results) => {
+        //       if (err) {
+        //         console.log(err);
+        //       }
+        //       console.log(results);
+        //     });
+        //     promises = [];
+        //     responses = [];
+        //     n = 0;
+        //     console.log("all cleared");
+        //   } catch (error) {
+        //     console.log(error);
+        //   }
+        // } else {
+        // console.log("running search");
+        console.log(cursor);
+        var data = JSON.stringify({
+          query:
+            cursor == null
+              ? queryCreated(updateQuery, first)
+              : queryCreatedCursor(updateQuery, first, cursor),
+          variables: {},
+        });
+        var token = [
+          process.env.GITHUB_TOKEN,
+          // process.env.GITHUB_TOKEN2,
+          // process.env.GITHUB_TOKEN3,
+          // process.env.GITHUB_TOKEN4,
+          // process.env.GITHUB_TOKEN5,
+        ];
+        // var token = configV3.extraction.githubTokens;
+        const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit
+        var config = {
+          method: "post",
+          url: "https://api.github.com/graphql",
+          headers: {
+            Authorization: `Bearer ${token[random]}`,
+            "Content-Type": "application/json",
+          },
+          data: data,
+        };
+        await axios(config)
+          .then(async function (response) {
+            cursor = response.data.data.search.pageInfo.endCursor;
+            hasNextpage = response.data.data.search.pageInfo.hasNextPage;
+            limit = response.data.data.rateLimit.remaining;
+            nodeCount = response.data.data.rateLimit.nodeCount;
+            // responses.push(response.data.data.search.edges);
             const saveData = {
               filetoname: configV3.extraction.fileName,
-              response: responses,
+              response: response.data.data.search.edges,
             };
             await append2JSON(saveData, (err, results) => {
               if (err) {
@@ -49,78 +107,36 @@ module.exports = {
               }
               console.log(results);
             });
-            promises = [];
-            responses = [];
-            n = 0;
-            console.log("all cleared");
-          } catch (error) {
-            console.log(error);
-          }
-        } else {
-          // console.log("running search");
-          console.log(cursor);
-          var data = JSON.stringify({
-            query:
-              cursor == null
-                ? queryCreated(updateQuery, first)
-                : queryCreatedCursor(updateQuery, first, cursor),
-            variables: {},
+          })
+          .catch(function (err) {
+            console.log(err);
+            return callback(err);
           });
-          var token = [
-            process.env.GITHUB_TOKEN,
-            // process.env.GITHUB_TOKEN2,
-            // process.env.GITHUB_TOKEN3,
-            // process.env.GITHUB_TOKEN4,
-            // process.env.GITHUB_TOKEN5,
-          ];
-          // var token = configV3.extraction.githubTokens;
-          const random = Math.floor(Math.random() * token.length); //picks random token from the array so that no token reach to it't limit
-          var config = {
-            method: "post",
-            url: "https://api.github.com/graphql",
-            headers: {
-              Authorization: `Bearer ${token[random]}`,
-              "Content-Type": "application/json",
-            },
-            data: data,
-          };
-          await axios(config)
-            .then(function (response) {
-              cursor = response.data.data.search.pageInfo.endCursor;
-              hasNextpage = response.data.data.search.pageInfo.hasNextPage;
-              limit = response.data.data.rateLimit.remaining;
-              nodeCount = response.data.data.rateLimit.nodeCount;
-              responses.push(response.data.data.search.edges);
-            })
-            .catch(function (err) {
-              console.log(err);
-              return callback(err);
-            });
-        }
+        // }
       } catch (error) {
         console.log(error);
       }
       n = n + 1;
     }
     // await append2json(responses, "sample");
-    const saveData = {
-      filetoname: configV3.extraction.fileName,
-      response: responses,
-    };
-    await append2JSON(saveData, (err, results) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(results);
-    });
-    await append2Txt(saveData, (err, results) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(results);
-    });
+    // const saveData = {
+    //   filetoname: configV3.extraction.fileName,
+    //   response: responses,
+    // };
+    // await append2JSON(saveData, (err, results) => {
+    //   if (err) {
+    //     console.log(err);
+    //   }
+    //   console.log(results);
+    // });
+    // await append2Txt(saveData, (err, results) => {
+    //   if (err) {
+    //     console.log(err);
+    //   }
+    //   console.log(results);
+    // });
     promises = [];
-    responses = [];
+    // responses = [];
     console.log("Done!", cursor);
     return callback(null, {
       cursor,
