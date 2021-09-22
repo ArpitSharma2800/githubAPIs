@@ -50,7 +50,13 @@ module.exports = {
   },
   //append to dictionary in json formatted data
   saveDictJSON: (data, callBack) => {
+    // var dir = `./apiV3/${data.filetoname}`;
+
+    // if (!fs.existsSync(dir)) {
+    //   fs.mkdirSync(dir);
+    // }
     fs.appendFile(
+      // `./apiV3/${data.filetoname}/dictionary.json`, //path can be changes where files need to be saved
       `./apiV3/dictionary/${data.filetoname}.json`, //path can be changes where files need to be saved
       JSON.stringify(data.response, null, 4),
       function (err) {

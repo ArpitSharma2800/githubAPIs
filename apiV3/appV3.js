@@ -2,6 +2,11 @@ const fs = require("fs");
 const configV3 = require("./config.json");
 const moment = require("moment");
 var axios = require("axios");
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 const {
   append2JSON,
   saveDictJSON,
@@ -14,12 +19,23 @@ const JSONToCSV = require("json2csv").parse;
 const { extractionApi, extractionApiSingle } = require("./service/service");
 const { queryRepoCount } = require("./graphQLQuery");
 module.exports = {
-  jsonArrayCount: () => {
+  jsonArrayCount: async () => {
     console.log("running");
-    const file = require("./SavedFiles/sampleExtSingle.json"); //give path to file location.
-    const data = file;
-    data.forEach((ele, i) => {
-      console.log(i);
+    rl.question(
+      "what's the file name you want check ? ",
+      async function (fileName) {
+        console.log(fileName);
+        const file = require(`./SavedFiles/${fileName}.json`); //give path to file location.
+        // const file = require("./SavedFiles/sampleExtSingle.json"); //give path to file location.
+        const data = file;
+        data.forEach((ele, i) => {
+          console.log(i);
+        });
+      }
+    );
+    rl.on("close", function () {
+      console.log("\nCounting Completed !!!");
+      process.exit(0);
     });
   },
   //extracting repository data

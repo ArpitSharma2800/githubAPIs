@@ -5,6 +5,10 @@
     "type": "created",
     "startDate": "01-01-2020",
     "endDate": "01-01-2020",
-    "fileName": "sampleExtSingle"
-  }
+    "fileName": "sampleExtSingleTestMeet"
+  },
+  "topicsExtraction": {},
+  "languageExtraction": {},
+  "dictionary": {},
+  "DescTags": {}
 }
