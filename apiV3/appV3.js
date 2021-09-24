@@ -38,21 +38,60 @@ module.exports = {
       process.exit(0);
     });
   },
+  extractionSetup: async () => {
+    rl.question("Query: ", async function (queryInput) {
+      console.log(queryInput);
+      rl.question("start date (dd-mm-yyyy): ", async function (startDateInput) {
+        console.log(startDateInput);
+        rl.question("end date (dd-mm-yyyy): ", async function (endDateInput) {
+          console.log(endDateInput);
+          rl.question(
+            "cursor (Null if starting): ",
+            async function (cursorInput) {
+              console.log(cursorInput);
+              rl.question(
+                "number of repos in one call: ",
+                async function (firstInput) {
+                  console.log(firstInput);
+                  rl.question("Output file name: ", async function (fileInput) {
+                    console.log(fileInput);
+                    const data = {
+                      query: queryInput,
+                      startDate: startDateInput,
+                      endDate: endDateInput,
+                      cursor: cursorInput,
+                      first: parseInt(firstInput),
+                      file: fileInput,
+                    };
+                    module.exports.extraction(data);
+                  });
+                }
+              );
+            }
+          );
+        });
+      });
+    });
+  },
   //extracting repository data
-  extraction: async () => {
-    // console.log(config);
+  extraction: async (dataModule) => {
+    // console.log(dataModule);
     var repoCount = 0;
-    let startDate = moment(configV3.extraction.startDate, "DD-MM-YYYY");
-    let endDate = moment(configV3.extraction.endDate, "DD-MM-YYYY");
+    let startDate = moment(dataModule.startDate, "DD-MM-YYYY");
+    let endDate = moment(dataModule.endDate, "DD-MM-YYYY");
+    console.log(startDate, endDate);
     // query like `android created:2020-01-01..2020-12-31 stars:>=3` can be converted in below format
     // this can be edited according to need of the data required
     const data = {
-      query: configV3.extraction.query,
+      query: dataModule.query,
       startDate: startDate,
       endDate: endDate.format("YYYY-MM-DD"),
-      cursor: null,
-      first: 10, //number of data in single API Call, can be increased just be careful about Github limit.
+      cursor: dataModule.cursor || null,
+      first: dataModule.first || 10, //number of data in single API Call, can be increased just be careful about Github limit.
+      fileName: dataModule.file,
     };
+    // console.log(data);
+
     var dataApi = JSON.stringify({
       query: queryRepoCount(
         data.query +

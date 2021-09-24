@@ -15,6 +15,7 @@ module.exports = {
     var startDate = data.startDate;
     var endDate = data.endDate;
     var queryData = data.query;
+    var FileToNamed = data.fileName;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -92,7 +93,7 @@ module.exports = {
             nodeCount = response.data.data.rateLimit.nodeCount;
             // responses.push(response.data.data.search.edges);
             const saveData = {
-              filetoname: configV3.extraction.fileName,
+              filetoname: FileToNamed,
               response: response.data.data.search.edges,
             };
             await append2JSON(saveData, (err, results) => {
@@ -152,6 +153,7 @@ module.exports = {
     var startDate = data.startDate;
     var endDate = data.endDate;
     var queryData = data.query;
+    var FileToNamed = data.fileName;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -208,7 +210,7 @@ module.exports = {
               nodeCount = response.data.data.rateLimit.nodeCount;
               responses.push(JSON.stringify(response.data.data.search.edges));
               const saveData = {
-                filetoname: configV3.extraction.fileName,
+                filetoname: FileToNamed,
                 response: response.data.data.search.edges,
               };
               await append2JSON(saveData, (err, results) => {
