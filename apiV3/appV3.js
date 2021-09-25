@@ -39,6 +39,18 @@ module.exports = {
     });
   },
   extractionSetup: async () => {
+    console.log("fefe");
+    console.log(process.argv);
+    // const data = {
+    //   query: process.argv[1],
+    //   startDate: process.argv[1],
+    //   endDate: process.argv[1],
+    //   cursor: process.argv[1],
+    //   first: parseInt(process.argv[1]),
+    //   file: process.argv[1],
+    //   folder: process.argv[1],
+    // };
+    // module.exports.extraction(data);
     rl.question("Query: ", async function (queryInput) {
       console.log(queryInput);
       rl.question("start date (dd-mm-yyyy): ", async function (startDateInput) {
@@ -55,15 +67,22 @@ module.exports = {
                   console.log(firstInput);
                   rl.question("Output file name: ", async function (fileInput) {
                     console.log(fileInput);
-                    const data = {
-                      query: queryInput,
-                      startDate: startDateInput,
-                      endDate: endDateInput,
-                      cursor: cursorInput,
-                      first: parseInt(firstInput),
-                      file: fileInput,
-                    };
-                    module.exports.extraction(data);
+                    rl.question(
+                      "Output folder name: ",
+                      async function (folderInput) {
+                        console.log(folderInput);
+                        const data = {
+                          query: queryInput,
+                          startDate: startDateInput,
+                          endDate: endDateInput,
+                          cursor: cursorInput,
+                          first: parseInt(firstInput),
+                          file: fileInput,
+                          folder: folderInput,
+                        };
+                        module.exports.extraction(data);
+                      }
+                    );
                   });
                 }
               );
@@ -89,6 +108,7 @@ module.exports = {
       cursor: dataModule.cursor || null,
       first: dataModule.first || 10, //number of data in single API Call, can be increased just be careful about Github limit.
       fileName: dataModule.file,
+      folderName: dataModule.folder,
     };
     // console.log(data);
 

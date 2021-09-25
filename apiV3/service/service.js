@@ -16,6 +16,7 @@ module.exports = {
     var endDate = data.endDate;
     var queryData = data.query;
     var FileToNamed = data.fileName;
+    var folderTOName = data.folderName;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -95,6 +96,7 @@ module.exports = {
             const saveData = {
               filetoname: FileToNamed,
               response: response.data.data.search.edges,
+              foldertoname: folderTOName,
             };
             await append2JSON(saveData, (err, results) => {
               if (err) {
@@ -154,6 +156,7 @@ module.exports = {
     var endDate = data.endDate;
     var queryData = data.query;
     var FileToNamed = data.fileName;
+    var folderTOName = data.folderName;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -203,7 +206,7 @@ module.exports = {
           };
           await axios(config)
             .then(async function (response) {
-              console.log(response.data.data.search.edges);
+              // console.log(response.data.data.search.edges);
               cursor = response.data.data.search.pageInfo.endCursor;
               hasNextpage = response.data.data.search.pageInfo.hasNextPage;
               limit = response.data.data.rateLimit.remaining;
@@ -212,6 +215,7 @@ module.exports = {
               const saveData = {
                 filetoname: FileToNamed,
                 response: response.data.data.search.edges,
+                foldertoname: folderTOName,
               };
               await append2JSON(saveData, (err, results) => {
                 if (err) {
