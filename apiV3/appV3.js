@@ -41,56 +41,70 @@ module.exports = {
   extractionSetup: async () => {
     console.log("fefe");
     console.log(process.argv);
-    // const data = {
-    //   query: process.argv[1],
-    //   startDate: process.argv[1],
-    //   endDate: process.argv[1],
-    //   cursor: process.argv[1],
-    //   first: parseInt(process.argv[1]),
-    //   file: process.argv[1],
-    //   folder: process.argv[1],
-    // };
-    // module.exports.extraction(data);
-    rl.question("Query: ", async function (queryInput) {
-      console.log(queryInput);
-      rl.question("start date (dd-mm-yyyy): ", async function (startDateInput) {
-        console.log(startDateInput);
-        rl.question("end date (dd-mm-yyyy): ", async function (endDateInput) {
-          console.log(endDateInput);
-          rl.question(
-            "cursor (Null if starting): ",
-            async function (cursorInput) {
-              console.log(cursorInput);
-              rl.question(
-                "number of repos in one call: ",
-                async function (firstInput) {
-                  console.log(firstInput);
-                  rl.question("Output file name: ", async function (fileInput) {
-                    console.log(fileInput);
-                    rl.question(
-                      "Output folder name: ",
-                      async function (folderInput) {
-                        console.log(folderInput);
-                        const data = {
-                          query: queryInput,
-                          startDate: startDateInput,
-                          endDate: endDateInput,
-                          cursor: cursorInput,
-                          first: parseInt(firstInput),
-                          file: fileInput,
-                          folder: folderInput,
-                        };
-                        module.exports.extraction(data);
-                      }
-                    );
-                  });
-                }
-              );
-            }
-          );
-        });
-      });
-    });
+    const data = {
+      query: process.argv[1],
+      type: process.argv[2],
+      startDate: process.argv[3],
+      endDate: process.argv[4],
+      cursor: process.argv[8],
+      first: parseInt(process.argv[7]),
+      file: process.argv[6],
+      folder: process.argv[5],
+    };
+    module.exports.extraction(data);
+    // rl.question("Query: ", async function (queryInput) {
+    //   console.log(queryInput);
+    //   rl.question("type", async function (typeInput) {
+    //     console.log(typeInput);
+    //     rl.question(
+    //       "start date (dd-mm-yyyy): ",
+    //       async function (startDateInput) {
+    //         console.log(startDateInput);
+    //         rl.question(
+    //           "end date (dd-mm-yyyy): ",
+    //           async function (endDateInput) {
+    //             console.log(endDateInput);
+    //             rl.question(
+    //               "cursor (Null if starting): ",
+    //               async function (cursorInput) {
+    //                 console.log(cursorInput);
+    //                 rl.question(
+    //                   "number of repos in one call: ",
+    //                   async function (firstInput) {
+    //                     console.log(firstInput);
+    //                     rl.question(
+    //                       "Output file name: ",
+    //                       async function (fileInput) {
+    //                         console.log(fileInput);
+    //                         rl.question(
+    //                           "Output folder name: ",
+    //                           async function (folderInput) {
+    //                             console.log(folderInput);
+    //                             const data = {
+    //                               query: queryInput,
+    //                               typeGit: typeInput,
+    //                               startDate: startDateInput,
+    //                               endDate: endDateInput,
+    //                               cursor: cursorInput,
+    //                               first: parseInt(firstInput),
+    //                               file: fileInput,
+    //                               folder: folderInput,
+    //                             };
+    //                             module.exports.extraction(data);
+    //                           }
+    //                         );
+    //                       }
+    //                     );
+    //                   }
+    //                 );
+    //               }
+    //             );
+    //           }
+    //         );
+    //       }
+    //     );
+    //   });
+    // });
   },
   //extracting repository data
   extraction: async (dataModule) => {
@@ -115,7 +129,7 @@ module.exports = {
     var dataApi = JSON.stringify({
       query: queryRepoCount(
         data.query +
-          ` ${configV3.extraction.type}:` +
+          ` ${dataModule.typeGit}:` +
           startDate.format("YYYY-MM-DD") +
           ".." +
           endDate.format("YYYY-MM-DD")
