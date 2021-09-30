@@ -177,7 +177,8 @@ module.exports = {
   topicsExtract: async () => {
     let dict = [];
     // If extractions are in multiple files, that files can be added to array and it will combine all the results inside single file
-    extract = ["./SavedFiles/sampleExtract.json"];
+    extract = configV3.topicsExtraction.files;
+    // extract = ["./SavedFiles/sampleExtract.json"];
     try {
       extract.forEach((elem, i) => {
         const data = require(elem);
@@ -203,7 +204,8 @@ module.exports = {
         });
       });
       const data = {
-        filetoname: "sampleTopicDict",
+        foldertoname: configV3.topicsExtraction.folderName,
+        filetoname: configV3.topicsExtraction.fileName,
         response: dict,
       };
       await saveDictJSON(data, (err, results) => {

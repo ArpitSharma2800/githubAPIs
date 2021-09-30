@@ -7,7 +7,14 @@
     "endDate": "01-01-2020",
     "fileName": "sampleExtSingleTestMeet"
   },
-  "topicsExtraction": {},
+  "topicsExtraction": {
+    "files": [
+      "./SavedFiles/sampleExtract.json",
+      "./SavedFiles/sampleExtract.json"
+    ],
+    "folderName": "testLandTopic",
+    "fileName": "testTopics"
+  },
   "languageExtraction": {},
   "dictionary": {},
   "DescTags": {}
