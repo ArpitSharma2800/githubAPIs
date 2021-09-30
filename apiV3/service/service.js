@@ -17,17 +17,14 @@ module.exports = {
     var queryData = data.query;
     var FileToNamed = data.fileName;
     var folderTOName = data.folderName;
+    var type = data.type;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
     let responses = [];
     let n = 0;
     let updateQuery =
-      queryData +
-      ` ${configV3.extraction.type}:` +
-      startDate.format("YYYY-MM-DD") +
-      ".." +
-      endDate;
+      queryData + ` ${type}:` + startDate.format("YYYY-MM-DD") + ".." + endDate;
     console.log(updateQuery);
     while (hasNextpage == true) {
       try {
@@ -157,6 +154,7 @@ module.exports = {
     var queryData = data.query;
     var FileToNamed = data.fileName;
     var folderTOName = data.folderName;
+    var type = data.type;
     let limit = null;
     let nodeCount = null;
     var hasNextpage = true;
@@ -170,9 +168,7 @@ module.exports = {
       cursor = null;
       while (hasNextpage == true) {
         let updateQuery =
-          queryData +
-          ` ${configV3.extraction.type}:` +
-          startDate.format("YYYY-MM-DD");
+          queryData + ` ${type}:` + startDate.format("YYYY-MM-DD");
         console.log(updateQuery);
         try {
           console.log(n);

@@ -40,7 +40,7 @@ module.exports = {
   },
   extractionSetup: async () => {
     console.log("fefe");
-    console.log(process.argv);
+    // console.log(process.argv);
     const data = {
       query: process.argv[1],
       type: process.argv[2],
@@ -119,12 +119,13 @@ module.exports = {
       query: dataModule.query,
       startDate: startDate,
       endDate: endDate.format("YYYY-MM-DD"),
-      cursor: dataModule.cursor || null,
+      cursor: null,
       first: dataModule.first || 10, //number of data in single API Call, can be increased just be careful about Github limit.
       fileName: dataModule.file,
       folderName: dataModule.folder,
+      type: dataModule.type,
     };
-    // console.log(data);
+    console.log(data);
 
     var dataApi = JSON.stringify({
       query: queryRepoCount(
